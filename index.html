@@ -277,8 +277,6 @@ input[type=range]::-moz-range-thumb { width: 16px; height: 18px; background: var
 .fx-row.pos { color: var(--lime); } .fx-row.neg { color: #ff8a8a; }
 /* 타이틀: 서브카피는 로고 아래, 입력칸은 건물 바로 아래로 */
 .title-sub { display: inline-block; margin-top: 12px; font-size: 14px; font-weight: 900; color: #2b2235; background: #fff3b0; border: 3px solid #1e2034; border-radius: 16px; padding: 5px 14px; box-shadow: 0 3px 0 #1e2034; }
-.title-form { position: absolute; left: 0; right: 0; top: calc(min(100vw, 460px) * 0.978 - 8px); margin-top: 0; padding: 8px 16px 20px; }
-@media (max-height: 760px) { .title-form { top: calc(min(100vw, 460px) * 0.85); } }
 /* ===== 햄버거 알바 미니게임 ===== */
 .bg-wrap { position: absolute; inset: 0; display: flex; flex-direction: column; background: #2b1428; }
 .bg-top { display: flex; justify-content: space-between; padding: 10px 12px 6px; font-size: 13px; color: #fff3b0; font-weight: 800; }
@@ -325,6 +323,132 @@ input[type=range]::-moz-range-thumb { width: 16px; height: 18px; background: var
 .as-br .s { color: var(--dim); font-size: 11px; margin-top: 2px; }
 .boost-box { margin-top: 10px; padding-top: 8px; border-top: 2px dashed #1f5257; }
 .boost-box .row { align-items: center; }
+
+/* ===== 모바일 가독성 · 조작성 개편 ===== */
+#sceneWrap { max-height: 36dvh; }
+.hud-stats { gap: 4px; padding: 5px 8px 3px; }
+.stat { padding: 6px 2px 5px; }
+.stat b { font-size: 16px; }
+.stat small { font-size: 11.5px; }
+.chip { font-size: 12.5px; padding: 4px 10px; }
+#band { padding: 5px 8px; gap: 8px; }
+#monthBar { height: 32px; }
+#monthLabel { font-size: 14px; }
+#tvIcon { width: 32px; height: 30px; }
+.band-btn { min-width: 46px; height: 36px; font-size: 15px; }
+#tabs { grid-template-columns: repeat(4, 1fr); gap: 6px; padding: 6px 8px; }
+.tab { height: 58px; }
+.tab svg { width: 26px; }
+.tab span { font-size: 13px; }
+#panel { padding: 10px 10px calc(32px + env(safe-area-inset-bottom)); font-size: 15px; }
+.card { padding: 12px; margin-bottom: 10px; }
+.card h3 { font-size: 16.5px; margin-bottom: 9px; }
+.card h3 small { font-size: 13px; }
+.row { font-size: 14.5px; padding: 5px 0; }
+.row.tot { border-top: 2px dashed #1f5257; margin-top: 4px; padding-top: 8px; font-weight: 900; }
+.muted { font-size: 13px; line-height: 1.55; }
+.toggle-item { padding: 9px 0; gap: 10px; }
+.toggle-item .info b { font-size: 15.5px; }
+.toggle-item .info small { font-size: 13px; line-height: 1.45; }
+.btn { font-size: 14.5px; padding: 10px 12px; min-height: 42px; }
+.toggle-item .btn { min-width: 74px; }
+.stepper { gap: 6px; }
+.stepper .btn { min-width: 44px !important; height: 42px; font-size: 20px; padding: 0; }
+.stepper b { min-width: 34px; font-size: 16px; }
+.slider { padding: 8px 0; }
+.slider .top { font-size: 15px; margin-bottom: 7px; }
+input[type=range] { height: 20px; }
+input[type=range]::-webkit-slider-thumb { width: 30px; height: 30px; }
+input[type=range]::-moz-range-thumb { width: 26px; height: 26px; }
+.bar.big { height: 16px; }
+.legend { font-size: 12.5px; gap: 5px 12px; }
+.kv2 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin: 10px 0 4px; text-align: center; }
+.kv2 > div { background: #0e3236; border-radius: 6px; padding: 7px 4px; }
+.kv2 small { display: block; font-size: 12px; color: var(--dim); }
+.kv2 b { display: block; font-size: 18px; margin-top: 2px; }
+.big-num { font-size: 32px; font-weight: 900; color: var(--lime); text-align: center; }
+.btn-row { display: flex; gap: 8px; margin: 10px 0 6px; }
+.btn-row .btn { flex: 1; }
+.funnel b { font-size: 17px; }
+.funnel small { font-size: 12px; }
+details.card > summary, details > summary { list-style: none; cursor: pointer; }
+details.card > summary::-webkit-details-marker, details > summary::-webkit-details-marker { display: none; }
+details.card > summary h3 { margin: 0; }
+details.card[open] > summary h3 { margin-bottom: 9px; }
+details summary.muted { margin-top: 8px; }
+.card.warn { border-color: #ff5d5d; }
+.hidden-stat { font-size: 14px; grid-template-columns: 96px 1fr 48px; }
+.cta { font-size: 15px; padding: 12px; }
+.cta small { font-size: 12.5px; }
+.rank-row { font-size: 15px; padding: 8px 4px; }
+.rank-row .nm small { display: block; font-size: 11.5px; color: var(--dim); font-weight: 400; }
+.br-item { font-size: 14px; padding: 9px; }
+/* 모달 */
+.mhead h3 { font-size: 18px; }
+.mhead small { font-size: 12.5px; }
+.mbody { font-size: 15px; line-height: 1.65; }
+.mfoot .btn { min-height: 46px; }
+.choice small { font-size: 12.5px !important; }
+.rep-sec { font-size: 14px; }
+.rep-tbl { font-size: 14px; }
+.rep-big b { font-size: 20px; }
+/* 안내 토스트: 화면 상단, 팝업과 겹치지 않음 */
+#toast { top: 62px; transform: translateX(-50%); }
+.tst { font-size: 14px; padding: 9px 14px; }
+/* 직원 연봉 등급 */
+.staff-item { border-top: 2px dashed #1f5257; padding-top: 2px; }
+.staff-item:first-of-type { border-top: 0; }
+.staff-item .toggle-item { border-top: 0; padding-bottom: 4px; }
+.grade-row { display: flex; align-items: center; gap: 6px; padding-bottom: 9px; }
+.grade-row .btn.sm { min-height: 32px; padding: 4px 10px; font-size: 13px; }
+.g-name { font-weight: 900; font-size: 13.5px; padding: 2px 8px; border-radius: 8px; background: #2c6e74; }
+.g-name.g1 { background: #4fb3d9; color: #12302f; } .g-name.g2 { background: #c39bff; color: #12302f; } .g-name.g3 { background: var(--yellow); color: #12302f; }
+.g-info { flex: 1; font-size: 12.5px; color: var(--dim); line-height: 1.35; }
+/* 하단 컨트롤 슬림화: 타임라인 바 · 탭 버튼 높이 축소 */
+#sceneWrap { max-height: 34dvh; }
+.hud-stats { padding: 4px 8px 2px; }
+.stat { padding: 4px 2px 3px; }
+#band { padding: 3px 8px; gap: 6px; }
+#tvIcon { display: none; }
+#monthBar { height: 26px; border-width: 2px; }
+#monthLabel { font-size: 13px; }
+.band-btn { min-width: 40px; height: 28px; font-size: 13px; border-width: 2px; }
+#tabs { padding: 3px 8px 4px; gap: 5px; }
+.tab { height: 40px; flex-direction: row; gap: 6px; border-width: 2px; box-shadow: inset 0 -3px 0 var(--mint2); }
+.tab svg { width: 18px; }
+.tab span { font-size: 13.5px; }
+.tab.on { transform: none; }
+
+/* 게임 시작 전(첫 지점 착공 전)에는 진행 바·탭 숨김 */
+#app.pre #band, #app.pre #tabs { display: none; }
+
+/* ===== 타이틀 화면 v2: 하늘·건물 위 로고, 아래는 깔끔한 입력 카드 ===== */
+#app.titlemode #sceneWrap { max-height: 50dvh; }
+#app.titlemode #hudStats, #app.titlemode #panel { display: none; }
+#app.titlemode { background: var(--soil); }
+.title-wrap { background: none; overflow-y: auto; }
+.title-sky { position: relative; flex: none; width: 100%; aspect-ratio: 180 / 176; max-height: 50dvh; }
+.title-logo { padding-top: 18px; }
+.title-logo .l1 { font-size: 36px; }
+.title-logo .l2 { font-size: 20px; margin-top: 8px; }
+.title-form { position: static; flex: 1; margin-top: 0; padding: 0 18px calc(18px + env(safe-area-inset-bottom));
+  display: flex; flex-direction: column; justify-content: center; gap: 12px;
+  background: linear-gradient(180deg, var(--soil) 0, var(--soil2) 100%); }
+.title-form .title-sub { align-self: center; margin: -16px 0 2px; position: relative; z-index: 1; }
+.title-form .btn { margin-top: 0; }
+.tf-card { background: rgba(0, 0, 0, .22); border: 3px solid #1e2034; border-radius: 10px; padding: 4px 12px 12px; box-shadow: inset 0 2px 0 rgba(255, 255, 255, .06); }
+.tf-card label { font-size: 13px; font-weight: 800; color: #f3dff2; margin: 10px 0 5px; }
+.tf-card input { border-radius: 6px; }
+.tf-card input:focus { outline: none; border-color: #d8f56b; box-shadow: 0 0 0 2px rgba(216, 245, 107, .35); }
+#tNew { background: #d8f56b; color: #1b3a14; border-color: #1b3a14; box-shadow: 0 4px 0 #1b3a14; font-size: 18px; }
+#tContinue small { display: block; margin-top: 3px; }
+.title-form .muted { margin: 0 !important; color: #c9a9c6; }
+.ver { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; margin-top: 0; font-size: 11.5px; }
+.ver span { background: rgba(255, 255, 255, .08); color: #e9d4ea; border-radius: 10px; padding: 3px 9px; }
+/* 랭킹 리워드 칩 */
+.rank-rw { display: flex; gap: 4px; flex-wrap: wrap; margin: 2px 0 6px; }
+.rank-rw span { font-size: 11.5px; padding: 2px 7px; border-radius: 8px; background: rgba(255, 255, 255, .07); color: #c9b9c6; }
+.rank-rw span.got { background: rgba(216, 245, 107, .18); color: var(--lime); font-weight: 800; }
 
 </style>
 </head>
@@ -406,11 +530,19 @@ const COMM_EVENTS = [
 ];
 
 const STAFF = [
-  { id: 'cm', name: '커뮤니티 매니저', pay: 300, eff: '만족도 +8 · 소음 민원 무료 중재' },
-  { id: 'sm', name: '세일즈 매니저',   pay: 400, eff: '지원·계약 전환율 +10%p' },
-  { id: 'mm', name: '마케팅 매니저',   pay: 350, eff: '문의 +30%' },
-  { id: 'fm', name: '시설 관리자',     pay: 450, eff: '고장 -50% · 시설 회복 +5/월' },
+  { id: 'cm', name: '커뮤니티 매니저', pay: 220, eff: '만족도 ↑ · 소음·주방 민원 처리', ace: '멤버십 참여율 +10%p' },
+  { id: 'sm', name: '세일즈 매니저',   pay: 280, eff: '지원·계약 전환율 ↑ · 리뷰·체납 처리', ace: '계약률 +5%p 추가' },
+  { id: 'mm', name: '마케팅 매니저',   pay: 250, eff: '문의 ↑', ace: '매달 브랜드 +2' },
+  { id: 'fm', name: '시설 관리자',     pay: 300, eff: '고장 ↓ · 시설 회복 · 고장 처리', ace: '시설 상태 매달 +5 추가' },
 ];
+// 연봉 등급: 높을수록 비싸지만 능력(효과)이 커지고 특기가 생김
+const PAY_GRADES = [
+  { name: '기본',   pay: 1,   ab: 1 },
+  { name: '우수',   pay: 1.4, ab: 1.35 },
+  { name: '베테랑', pay: 1.9, ab: 1.75, perk: '담당 민원 처리비 절반' },
+  { name: '에이스', pay: 2.5, ab: 2.2,  perk: '담당 민원 무료 처리 + 직무 특기' },
+];
+const CEO_NICKS = ['부동산 여우', '월세의 신', '공실 사냥꾼', '루프탑 킹', '서울 집사', '쉐어하우스 장인', '코리빙 마술사', '강남 큰손', '라운지 마스터', '방구석 재벌', '역세권 헌터', '보증금 요정', '청약 고수', '리모델링 장인', '임대왕', '골목 건물주'];
 
 // 서비스 업그레이드 (입주민 선호 충족) — cost는 60실 기준, 객실 수에 비례
 const UPGRADES = [
@@ -432,11 +564,11 @@ const BRAND_PERKS = [
 ];
 
 const COMPETITORS = [
-  { name: '하우스노트', score: 520 },
-  { name: '룸메이트랩', score: 380 },
-  { name: '어반하이브', score: 260 },
-  { name: '코지네스트', score: 160 },
-  { name: '스테이블룸', score: 90 },
+  { name: '하우스노트', ceo: '강도윤', asset: 1400, lv: 6, nw: 350 },
+  { name: '룸메이트랩', ceo: '윤서진', asset: 1000, lv: 5, nw: 260 },
+  { name: '어반하이브', ceo: '최민재', asset: 700, lv: 4, nw: 180 },
+  { name: '코지네스트', ceo: '한지우', asset: 450, lv: 3, nw: 120 },
+  { name: '스테이블룸', ceo: '오하린', asset: 250, lv: 2, nw: 70 },
 ];
 
 // 건물 정보: [공실리스크, 민원발생률, 시설유지비, 재계약률, 브랜드적합도] (0~100)
@@ -517,7 +649,7 @@ const STAGES = [
 const SURVEY_COST = 300; // 실사 비용(만원)
 const WAGE_RAISE = 0.03;  // 매년 3월 인건비 인상률 (국내 평균 임금 인상 수준)
 // 스테이지 클리어 목표 = (토지+건설비) × 연 목표 수익률 ÷ 12  — 스테이지가 오를수록 높아짐
-const STAGE_YIELD = [0.042, 0.048, 0.055, 0.065, 0.072, 0.08, 0.088, 0.088];
+const STAGE_YIELD = [0.042, 0.048, 0.055, 0.065, 0.07, 0.074, 0.078, 0.078];
 const RENO_YEARS = 15;     // 인테리어 리뉴얼 주기(년)
 const BOOST_MAX = 5;       // 프리미엄 마케팅 최대 배수
 const CHILD_COST = 300;   // 자녀 1명당 월 양육비(만원)
@@ -535,7 +667,10 @@ const UTIL_OCC = 6;           // 전기·수도: 입주 객실당 월 6만원
 // 실제 법인세 누진세율(2023~) + 지방소득세 10%: 2억 이하 9%, 200억 이하 19%, 3천억 이하 21%, 초과 24%
 const TAX_BRACKETS = [[20000, 0.09], [2000000, 0.19], [30000000, 0.21], [Infinity, 0.24]];
 const LOCAL_TAX = 0.1;
-const AUDIT_FINE = 9000000;   // 세무조사 추징금 900억
+const AUDIT_FINE = 500000;    // 세무조사 추징금 50억
+// 순위 상승 리워드 (브랜드 순위·CEO 순자산 순위 각각, 처음 달성할 때 1번): 순위 → 만원
+const RANK_REWARDS = { 4: 10000, 3: 20000, 2: 50000, 1: 100000 };
+const ACQUIRE_COST = 1500000; // 경쟁 브랜드 인수 150억
 const SUMMIT_XP = 150;        // 세계정상회담 브랜드 포인트
 const ALIMONY_BIG = 500000;   // 가족 소홀로 인한 이혼 위자료 50억 (+ 자녀 1명당 10억)
 const ALIMONY_KID = 100000;
@@ -547,7 +682,7 @@ const BIZ = [
   { id: "ads", name: "엘리베이터 광고 개발", short: "엘리베이터 광고", rev: "광고 수익", cost: 8000, costBy: { S: 4000, M: 8000, L: 14000 }, revMul: { S: 0.8, M: 1, L: 1.3 }, perOcc: 2.4, sat: -1, lvl: 1, desc: "엘리베이터·로비 디지털 사이니지에 광고 송출" },
 ];
 const BURGER_REWARD = [0, 1000, 3000, 6000, 12000, 20000]; // 알바 레벨별 보상 (최대 2억)
-const BANKRUPT_MONTHS = 5;  // -10억 초과 마이너스가 이만큼 이어지면 파산
+const BANKRUPT_MONTHS = 12; // -10억 넘는 빚(마이너스)이 12개월 연속이면 파산
 const SG_INVEST = 1000000; // 싱가포르 투자 100억
 const SG_SETUP = 250000;   // 회사 체계 구축 일시 비용 25억
 const SG_HQ = 7000;        // 본사 운영비 월 7천만
@@ -636,6 +771,9 @@ function fmtMoney(v, plus) {
 }
 function dateOf(m) { const t = m + 2; return { y: 2027 + Math.floor(t / 12), mo: (t % 12) + 1 }; }
 function dateStr(m) { const d = dateOf(m); return d.y + '.' + String(d.mo).padStart(2, '0'); }
+function spanStr(n) { n = Math.max(0, n); const y = Math.floor(n / 12), m = n % 12; return y ? (m ? `${y}년 ${m}개월` : `${y}년`) : `${m}개월`; }
+// 게임 시작부터 몇 년 몇 개월차인지 (0 → 1개월차)
+function elapsedStr(m) { const y = Math.floor(m / 12), mo = m % 12 + 1; return y ? `${y}년 ${mo}개월차` : `${mo}개월차`; }
 
 const Sim = {
   S: null,
@@ -644,8 +782,8 @@ const Sim = {
     return weighted(FAMILIES, f => f.rate);
   },
   fam(S = this.S) { return FAMILIES.find(f => f.id === (S && S.family)) || FAMILIES[0]; },
-  rate(S = this.S) { return this.fam(S).rate1 ? 0.03 / 12 : INTEREST; },
-  rateYear(S = this.S) { return this.fam(S).rate1 ? 3 : 4; },
+  rate(S = this.S) { return (this.fam(S).rate1 ? 0.03 / 12 : INTEREST) + (S.rateAdd || 0) / 12; },
+  rateYear(S = this.S) { return Math.round(((this.fam(S).rate1 ? 3 : 4) + (S.rateAdd || 0) * 100) * 10) / 10; },
 
   newGame(ceo, brand, famId) {
     const fam = FAMILIES.find(f => f.id === famId) || FAMILIES[0];
@@ -653,7 +791,7 @@ const Sim = {
     this.S = {
       v: 2, ceo, brand, family: fam.id, loanMul: lm, month: 0, cash: fam.money, loan: 0, loanCap: Math.round(STAGES[0].loan * lm),
       stage: 1, stageStatus: 'select', streak: 0, brandXP: fam.brand || 0,
-      branches: [], sel: 0, competitors: COMPETITORS.map(c => ({ ...c })),
+      branches: [], sel: 0, rankBest: { brand: 6, ceo: 6 }, competitors: (() => { const nk = CEO_NICKS.slice().sort(() => Math.random() - 0.5); return COMPETITORS.map((c, i) => ({ ...c, ceo: nk[i] })); })(),
       surveys: {}, negMonths: 0, over: false, won: false, tut: 0,
       lastNet: 0, lastRev: 0, history: [], pendingEvent: null, eventAt: 1, log: [],
     };
@@ -684,7 +822,7 @@ const Sim = {
   grade(b) { return GRADES[b.grade || 'std']; },
 
   targetFor(stage, invest) { return Math.max(2000, Math.round(invest * STAGE_YIELD[stage - 1] / 12 / 100) * 100); },
-  bTarget(b) { return b.target || this.targetFor(b.stage, b.invest || 0); },
+  bTarget(b) { return Math.round((b.target || this.targetFor(b.stage, b.invest || 0)) * (this.S.targetMul || 1) / 100) * 100; },
   startBranch(stage, landId, concept, size, borrow, grade) {
     const S = this.S; const st = STAGES[stage - 1]; const land = st.lands.find(l => l.id === landId);
     grade = grade || 'std';
@@ -701,7 +839,7 @@ const Sim = {
       budget: { clean: 50, fac: 50, mkt: 50, comm: 50 },
       staff: { cm: false, sm: false, mm: false, fm: false },
       channels: {}, events: {}, upgrades: {}, mods: [], pendingCost: 0,
-      revealed: [false, false, false, false, false], last: null, invest: c.land + c.build, buildCost: c.build, target: this.targetFor(stage, c.land + c.build),
+      revealed: [false, false, false, false, false], last: null, invest: c.land + c.build, buildCost: c.build, startM: S.month, payLv: {}, target: this.targetFor(stage, c.land + c.build),
     };
     if (stage === 6) b.name = S.brand + ' 성수 프리미엄점';
     const sv = (S.surveys[stage] || {})[landId] || [];
@@ -752,7 +890,7 @@ const Sim = {
     p.push(['청소', b.budget.clean * 0.2]);
     p.push(['시설 상태', b.cond * 0.15]);
     p.push(['커뮤니티 예산', b.budget.comm * 0.15]);
-    const cmN = this.stN(b, 'cm'); if (cmN) p.push(['커뮤니티 매니저' + (cmN > 1 ? ' ×' + cmN : ''), this.dim(cmN, 8)]);
+    const cmN = this.stN(b, 'cm'); if (cmN) p.push(['커뮤니티 매니저' + (cmN > 1 ? ' ×' + cmN : ''), this.dim(cmN, 8) * this.ab(b, 'cm')]);
     let ev = 0;
     COMM_EVENTS.forEach(e => {
       const n = this.evN(b, e.id); if (!n) return; const k = this.dim(n, 1);
@@ -799,7 +937,7 @@ const Sim = {
       UPGRADES.forEach(u => { if (b.upgrades[u.id] && u.seg === k) v *= 1.1; });
       v *= 1 + 0.06 * (lvl - 1);
       v *= rentMul;
-      const mmN = this.stN(b, 'mm'); if (mmN) v *= 1 + this.dim(mmN, 0.3);
+      const mmN = this.stN(b, 'mm'); if (mmN) v *= 1 + this.dim(mmN, 0.3) * this.ab(b, 'mm');
       v *= this.boostInq(b);
       v *= this.modMul(b, 'inq', k);
       v *= 1 - land.hidden[0] / 250;
@@ -827,8 +965,8 @@ const Sim = {
     const lvl = this.lvl();
     return {
       tour: clamp(0.5 + 0.02 * (lvl - 1), 0.05, 0.9),
-      apply: clamp((0.5 + this.dim(this.stN(b, 'sm'), 0.1)) * this.priceResist(b), 0.05, 0.9),
-      contract: clamp((0.46 + this.dim(this.stN(b, 'sm'), 0.1) + 0.015 * (lvl - 1) + this.modAdd(b, 'contract')) * Math.sqrt(this.rentMulAvg(b) > 1 ? 1 : this.rentMulAvg(b)), 0.05, 0.9),
+      apply: clamp((0.5 + this.dim(this.stN(b, 'sm'), 0.1) * this.ab(b, 'sm')) * this.priceResist(b), 0.05, 0.9),
+      contract: clamp((0.46 + this.dim(this.stN(b, 'sm'), 0.1) * this.ab(b, 'sm') + (this.ace(b, 'sm') ? 0.05 : 0) + 0.015 * (lvl - 1) + this.modAdd(b, 'contract')) * Math.sqrt(this.rentMulAvg(b) > 1 ? 1 : this.rentMulAvg(b)), 0.05, 0.9),
       movein: 0.8,
     };
   },
@@ -868,7 +1006,7 @@ const Sim = {
   memberRate(b) {
     const f = b.member || 0; if (!f) return 0;
     const ev = this.sessions(b) * 0.8;
-    return clamp(0.95 - f * 0.028 + b.budget.comm / 100 * 0.15 + ev * 0.03, 0.05, 0.98);
+    return clamp(0.95 - f * 0.028 + b.budget.comm / 100 * 0.15 + ev * 0.03 + (this.ace(b, 'cm') ? 0.1 : 0), 0.05, 0.98);
   },
   extraRev(b, occ) {
     const lvl = this.lvl(); const o = { member: 0, data: 0, ads: 0 };
@@ -885,11 +1023,19 @@ const Sim = {
   upgradeCost(b, u) { return Math.round(u.cost * this.rooms(b) / 60 * (b.size === 'L' ? 1.15 : 1) / 10) * 10; },
   // 건물 규모 배수 (Small 기준) · 연차별 임금 인상
   sizeMul(b) { return { S: 1.3, M: 2, L: 3 }[b.size]; },
-  wageMul(S = this.S) { return Math.pow(1 + WAGE_RAISE, Math.floor(S.month / 12)); },
-  staffPay(b, s) { return Math.round(s.pay * this.sizeMul(b) * this.wageMul() / 10) * 10; },
+  wageMul(S = this.S) { return Math.pow(1 + WAGE_RAISE, Math.floor(S.month / 12)) * (S.wageBonus || 1); },
+  // 직원 월급: 직무 기본급 × 연봉 등급 × 지점 근속연수만큼 인상(연 3%) × 노조 합의
+  staffYears(b) { return Math.max(0, Math.floor((this.S.month - (b.startM != null ? b.startM : (b.openedAt || 0))) / 12)); },
+  payLv(b, id) { return (b.payLv && b.payLv[id]) || 0; },
+  staffPay(b, s) { return Math.round(s.pay * PAY_GRADES[this.payLv(b, s.id)].pay * Math.pow(1 + WAGE_RAISE, this.staffYears(b)) * (this.S.wageBonus || 1) / 10) * 10; },
+  // 능력 배수: 연봉 등급 + 근속 경력(1년마다 +5%, 최대 +30%)
+  ab(b, id) { return PAY_GRADES[this.payLv(b, id)].ab * (1 + 0.05 * Math.min(6, this.staffYears(b))); },
+  ace(b, id) { return this.stN(b, id) > 0 && this.payLv(b, id) >= 3; },
+  // 민원 자동 처리: 오픈 1년 지난 지점 + 담당 직원 연봉 '우수' 이상
+  autoOK(b, id) { return this.stN(b, id) > 0 && b.status === 'open' && (b.monthsOpen || 0) >= AUTO_OPEN_MONTHS && this.payLv(b, id) >= AUTO_MIN_GRADE; },
   chCost(b, ch) { return Math.round(ch.cost * this.sizeMul(b) / 5) * 5; },
 
-  breakdownW(b) { return (0.6 + (100 - b.cond) / 30) / (1 + this.stN(b, 'fm')); },
+  breakdownW(b) { return (0.6 + (100 - b.cond) / 30) / (1 + this.stN(b, 'fm') * this.ab(b, 'fm')); },
   // 직원 수(0~3) · 이벤트 회차(0~4) · 체감 효과(첫째 100%, 둘째 50%, 셋째 25%)
   stN(b, id) { const v = b.staff[id]; return v === true ? 1 : (v || 0); },
   evN(b, id) { const v = b.events[id]; return v === true ? 1 : (v || 0); },
@@ -928,7 +1074,7 @@ const Sim = {
     S.fatigue = clamp((S.fatigue || 0) + 2 + nOpen * 0.7 + nBuild * 1.2 + (net < 0 ? 1 : 0) + rnd(-1, 1), 0, 100);
     S.history.push({ m: S.month, rev, net }); if (S.history.length > 24) S.history.shift();
     // 경쟁사 성장
-    S.competitors.forEach(c => c.score += Math.round(rnd(1.5, 5.5) * (c.score / 600 + 0.5)));
+    S.competitors.forEach(c => { this.fixComp(c); c.asset = Math.round(c.asset + c.g * rnd(0.6, 1.4)); c.g *= 0.995; c.nw = Math.round(c.nw * rnd(1.003, 1.009) * 10) / 10; if (S.month % 24 === 0 && c.lv < 10) c.lv++; });
     rep.neg = S.cash < 0;
     // 마이너스 통장: -10억까지는 허용, 그보다 깊으면 대출 한도 안에서 비상 대출
     const deep = S.cash < -OVERDRAFT; // 이번 달 -10억을 넘었는가 (비상 대출로 메워도 위기로 셈)
@@ -1023,7 +1169,7 @@ const Sim = {
     // 만족도 / 시설
     const tgt = this.satTarget(b);
     b.sat = clamp(b.sat + (tgt - b.sat) * 0.4, 0, 100);
-    b.cond = clamp(b.cond - (3 + land.hidden[2] / 100 * 6 + (b.size === 'L' ? 2 : 0)) + b.budget.fac / 100 * 9 + this.dim(this.stN(b, 'fm'), 5), 0, 100);
+    b.cond = clamp(b.cond - (3 + land.hidden[2] / 100 * 6 + (b.size === 'L' ? 2 : 0)) + b.budget.fac / 100 * 9 + this.dim(this.stN(b, 'fm'), 5) * this.ab(b, 'fm') + (this.ace(b, 'fm') ? 5 : 0), 0, 100);
     // 브랜드
     let xp = 0; const occR = occEnd / rooms;
     if (occR >= 0.9) xp += 2; else if (occR >= 0.7) xp += 1;
@@ -1033,6 +1179,7 @@ const Sim = {
     xp *= 0.6 + land.hidden[4] / 100 * 0.8;
     if (b.concept === 'creator') xp *= 1.2;
     CHANNELS.forEach(chn => { if (b.channels[chn.id] && chn.brand && !rep['ch_' + chn.id]) { xp += chn.brand; rep['ch_' + chn.id] = true; } });
+    if (this.ace(b, 'mm')) xp += 2;
     S.brandXP = Math.max(0, S.brandXP + xp); rep.xp += xp;
     // 정보 공개
     b.monthsOpen++;
@@ -1111,16 +1258,25 @@ const Sim = {
     return false;
   },
 
+  // 업계 랭킹 점수 = 자산가치(억)×0.5 + 브랜드 레벨×25 + 평균 만족도
+  assetsOf(S = this.S) { return S.cash + S.branches.reduce((a, b) => a + (b.invest || 0), 0); },
+  netWorth(S = this.S) { return (this.assetsOf(S) - S.loan - (S.unpaid || 0)) * (1 - (S.stake || 0)) + (S.house ? 145000 : 0); },
+  fixComp(c) { if (!CEO_NICKS.includes(c.ceo)) c.ceo = pick(CEO_NICKS); if (c.asset == null) { c.asset = (c.score || 100) * 2; c.lv = 4; c.nw = (c.score || 100) * 0.5; c.ceo = c.ceo || '대표'; } if (!c.g) c.g = c.asset * 0.022; return c; },
+  compScore(c) { this.fixComp(c); return Math.round(c.asset * 0.5 + c.lv * 25 + 80); },
   score(S = this.S) {
     const open = S.branches.filter(b => b.status === 'open');
-    const occ = open.reduce((a, b) => a + this.occ(b), 0);
     const sat = open.length ? open.reduce((a, b) => a + b.sat, 0) / open.length : 0;
-    return Math.round(occ + this.lvl(S) * 25 + sat);
+    return Math.round(this.assetsOf(S) / 10000 * 0.5 + this.lvl(S) * 25 + sat);
   },
   rank(S = this.S) {
     const me = this.score(S);
-    const list = S.competitors.map(c => ({ name: c.name, score: c.score })).concat([{ name: S.brand, score: me, me: true }]);
+    const list = S.competitors.map(c => ({ name: c.name, score: this.compScore(c), asset: c.asset, lv: c.lv })).concat([{ name: S.brand, score: me, asset: Math.round(this.assetsOf(S) / 10000), lv: this.lvl(S), me: true }]);
     list.sort((a, b) => b.score - a.score);
+    return { list, me: list.findIndex(x => x.me) + 1 };
+  },
+  ceoRank(S = this.S) {
+    const list = S.competitors.map(c => { this.fixComp(c); return { name: c.ceo, brand: c.name, nw: c.nw }; }).concat([{ name: S.ceo, brand: S.brand, nw: Math.round(this.netWorth(S) / 10000), me: true }]);
+    list.sort((a, b) => b.nw - a.nw);
     return { list, me: list.findIndex(x => x.me) + 1 };
   },
 
@@ -1300,6 +1456,14 @@ EVENTS.push(
       { label: '직원들이 직접 삽질', cost: (b, G) => Math.round(30 * G.scale(b)), desc: '만족도 -8 · 시설 상태 -8', apply: b => { b.sat = clamp(b.sat - 8, 0, 100); b.cond = clamp(b.cond - 8, 0, 100); } },
     ] },
 );
+
+// 직원이 있으면 알아서 처리하는 간단한 민원: [담당 직무, 자동 선택지 번호]
+const AUTO_OPEN_MONTHS = 12, AUTO_MIN_GRADE = 1;
+const AUTO_RESOLVE = {
+  washer: ['fm', 0], wifi: ['fm', 0], leak: ['fm', 0], aircon: ['fm', 0], boiler: ['fm', 0],
+  noise: ['cm', 0], kitchen: ['cm', 0], heat: ['cm', 0],
+  review1: ['sm', 0], arrears: ['sm', 1],
+};
 
 </script>
 <script>
@@ -2298,7 +2462,7 @@ Object.assign(SCN, {
     }
     Z.person(132, 36, Object.assign({}, CEO_LOOK, { u: 2, mouth: '#222' }));
     for (let i = 0; i < 2; i++) Z.r(130 + i * 8, 30 - ((t / 50 + i * 4) % 8), 2, 3, '#9ec3ff');
-    Z.text('추징금 900억', 100, 80, 7, '#ff3b3b', '#ffffff');
+    Z.text('추징금 50억', 100, 80, 7, '#ff3b3b', '#ffffff');
   },
   summit(Z, t) {
     Z.r(0, 0, 160, 90, '#1e2a4a');
@@ -2692,6 +2856,7 @@ const ICONS = {
   mega: ['........a.', '......aaa.', '....aaaaa.', 'aaaaaaaaa.', 'aaaaaaaaa.', 'aaaaaaaaa.', '....aaaaa.', '.aa...aaa.', '.aa.....a.', '..........'],
   pause: ['aa..aa', 'aa..aa', 'aa..aa', 'aa..aa', 'aa..aa', 'aa..aa'],
   play: ['a.....', 'aaa...', 'aaaaa.', 'aaaaa.', 'aaa...', 'a.....'],
+  coin: ['...aaaa...', '.aaaaaaaa.', '.aa.aa.aa.', 'aaa.aa.aaa', 'aaaaaaaaaa', 'aaa.aa.aaa', 'aaa.aa.aaa', '.aa.aa.aa.', '.aaaaaaaa.', '...aaaa...'],
 };
 const MEDAL = pxSvg(['.gg..gg.', '.gg..gg.', '..gggg..', '..yyyy..', '.yyooyy.', 'yyoyyoyy', 'yyyooyyy', '.yyyyyy.', '..yyyy..'], { g: '#3fa35a', y: '#f2b632', o: '#fff3b0' }, 28);
 const TROPHY = pxSvg(['yyyyyyyyyy', 'yoyyyyyyoy', 'y.yyyyyy.y', '.yyyyyyyy.', '..yyyyyy..', '...yyyy...', '....yy....', '....yy....', '...oooo...', '..oooooo..'], { y: '#f2b632', o: '#8a5a2a' }, 28);
@@ -2702,9 +2867,8 @@ const COO_FACE = pxSvg(['...hhhhhh...', '..hhhhhhhh..', '.hhhhhhhhhh.', '.hhssss
 const TABS = [
   { id: 'home', ic: 'home', label: '지점' },
   { id: 'ops', ic: 'wrench', label: '운영' },
-  { id: 'people', ic: 'people', label: '사람' },
-  { id: 'brand', ic: 'star', label: '브랜드' },
   { id: 'mkt', ic: 'mega', label: '마케팅' },
+  { id: 'fin', ic: 'coin', label: '재무' },
 ];
 
 const UI = {
@@ -2752,6 +2916,7 @@ const UI = {
 
   // ---------- 타이틀 ----------
   showTitle() {
+    $('#app').classList.add('pre', 'titlemode');
     this.title = true; this.screenOpen = true; $('#hud').style.visibility = $('#hudStats').style.visibility = 'hidden';
     const occ = { stu: 14, intl: 6, junior: 4, creator: 2, expat: 1 };
     this.demoS = { brand: 'CO-LIVING', stage: 1 };
@@ -2760,13 +2925,13 @@ const UI = {
     if (saved && !saved.family) saved.family = 'shop';
     const sc = $('#screen'); sc.classList.remove('hidden'); sc.style.background = 'transparent';
     sc.innerHTML = `<div class="title-wrap">
-      <div class="title-logo"><div class="l1">CO-LIVING<br>TYCOON</div><div class="l2">: SEOUL :</div><div class="title-sub">코리빙 브랜드 1위에 도전하세요</div></div>
-      <div class="title-form">
-        ${saved && !saved.over ? `<button class="btn y big" id="tContinue">▶ 이어하기 <small style="font-weight:400">${esc(saved.ceo)} 대표 · ${esc(saved.brand)} · ${dateStr(saved.month)}</small></button><div class="muted" style="text-align:center;margin:12px 0 0">또는 새로 시작</div>` : ''}
-        <label>건물주 이름</label><input id="tCeo" maxlength="10" placeholder="예: 배아담" value="">
-        <label>코리빙 브랜드명</label><input id="tBrand" maxlength="12" placeholder="예: episode" value="">
+      <div class="title-sky"><div class="title-logo"><div class="l1">CO-LIVING<br>TYCOON</div><div class="l2">: SEOUL :</div></div></div>
+      <div class="title-form"><div class="title-sub">코리빙 브랜드 1위에 도전하세요</div>
+        ${saved && !saved.over ? `<button class="btn y big" id="tContinue">▶ 이어하기 <small style="font-weight:400">${esc(saved.ceo)} 대표 · ${esc(saved.brand)} · ${elapsedStr(saved.month)}</small></button><div class="muted" style="text-align:center;margin:12px 0 0">또는 새로 시작</div>` : ''}
+        <div class="tf-card"><label>🏠 건물주 이름</label><input id="tCeo" maxlength="10" placeholder="예: 배아담" value="">
+        <label>🏷️ 코리빙 브랜드명</label><input id="tBrand" maxlength="12" placeholder="예: episode" value=""></div>
         <button class="btn big" id="tNew">새 게임 시작</button>
-        <div class="ver">서울 10개 지점 · 브랜드 레벨 10 · 업계 1위</div>
+        <div class="ver"><span>🏢 서울 10개 지점</span><span>⭐ 브랜드 Lv.10</span><span>🏆 업계 1위</span></div>
       </div></div>`;
     const cont = $('#tContinue');
     if (cont) cont.onclick = () => { Sim.S = saved; this.startPlay(); };
@@ -2791,6 +2956,7 @@ const UI = {
   },
 
   startPlay(fresh) {
+    $('#app').classList.remove('titlemode');
     this.title = false; this.screenOpen = false; this.prog = 0; this.pendingEv = null; $('#hud').style.visibility = $('#hudStats').style.visibility = '';
     const sc = $('#screen'); sc.classList.add('hidden'); sc.style.background = ''; sc.innerHTML = '';
     this.tab = 'home'; this.renderPanel(true); this.updHud(true);
@@ -2972,7 +3138,7 @@ const UI = {
         ${ok ? `<div class="slider"><div class="top"><span>이번에 받을 대출</span><b>${fmtMoney(s.borrow)}</b></div>
         <input type="range" id="borrowR" min="${minB}" max="${av}" step="10000" value="${s.borrow}" ${av === minB ? 'disabled' : ''}></div>` : `<div class="neg" style="font-size:12px">자금이 ${fmtMoney(minB - av)} 부족해요. 등급·규모를 낮추거나 기존 지점을 운영해 현금을 모으세요</div>`}
         <div class="fin-big"><div><small>월 이자</small><b class="neg">-${fmtMoney(Math.round((S.loan + s.borrow) * Sim.rate()))}</b><em>대출 총 ${fmtMoney(S.loan + s.borrow)} · 연 ${Sim.rateYear()}%</em></div><div><small>착공 후 남는 현금</small><b class="${after < 3000 ? 'neg' : 'pos'}">${fmtMoney(after)}</b><em>${after < 0 ? '마이너스 통장 사용' : '운영 자금'}</em></div></div>
-        <div class="muted">오픈 직후엔 입주자가 적어 적자가 나요. 최소 몇 달 운영비는 남겨두세요. 현금은 마이너스 10억까지 버틸 수 있어요. 그보다 깊으면 비상 대출이 실행되지만, 그런 달이 5개월 연속이면 파산이에요</div></div>`;
+        <div class="muted">오픈 직후엔 입주자가 적어 적자가 나요. 최소 몇 달 운영비는 남겨두세요. 현금은 마이너스 10억까지 버틸 수 있어요. 그보다 깊으면 비상 대출이 실행되지만, 그런 달이 12개월 연속이면 파산이에요</div></div>`;
       foot = `<button class="btn ghost" data-nav="prev">◀</button><button class="btn y big" data-nav="go" ${ok ? '' : 'disabled'}>🏗 착공!</button>`;
     }
     sc.innerHTML = head + `<div class="scr-body">${body}</div><div class="scr-foot">${foot}</div>`;
@@ -3059,13 +3225,13 @@ const UI = {
     if (rep.reval) this.toast(`🏙️ 부동산 재평가 · 자산가치 +${fmtMoney(rep.reval)} · 대출 한도 +${fmtMoney(Math.round(rep.reval * 0.7))}`);
     const tot = S.branches.reduce((a, x) => a + (x.last && !x.last.building ? x.last.movein : 0), 0);
     const out = S.branches.reduce((a, x) => a + (x.last && !x.last.building ? x.last.moveout : 0), 0);
-    if (S.showReport === false && S.branches.some(x => x.status === 'open')) this.toast(`📅 ${dateStr(S.month - 1)} 결산 · 순이익 ${fmtMoney(rep.net, true)} · 입주 ${tot} / 퇴실 ${out}`);
+    if (S.showReport === false && S.branches.some(x => x.status === 'open')) this.toast(`📅 ${elapsedStr(S.month - 1)} 결산 · 순이익 ${fmtMoney(rep.net, true)} · 입주 ${tot} / 퇴실 ${out}`);
     if (S.over) {
-      this.modal({ icon: '💀', title: '파산했어요', sub: `${S.ceo} 대표의 도전은 여기까지`, body: '마이너스 통장 한도(-10억)를 넘는 적자가 5개월 연속 이어졌어요<br>비상 대출로도 더는 버틸 수 없어요<br>무리한 대출이나 낮은 입주율을 조심하세요', buttons: [{ label: '처음부터 다시', cls: 'y', on: () => { localStorage.removeItem(SAVE_KEY); this.showTitle(); } }] });
+      this.modal({ icon: '💀', title: '파산했어요', sub: `${S.ceo} 대표의 도전은 여기까지`, body: '마이너스 통장 한도(-10억)를 넘는 적자가 12개월 연속 이어졌어요<br>비상 대출로도 더는 버틸 수 없어요<br>무리한 대출이나 낮은 입주율을 조심하세요', buttons: [{ label: '처음부터 다시', cls: 'y', on: () => { localStorage.removeItem(SAVE_KEY); this.showTitle(); } }] });
       localStorage.removeItem(SAVE_KEY); return;
     }
     if (rep.stage && rep.stage.cleared) this.stageClear(rep.stage.cleared);
-    if (rep.wage) this.modal({ icon: '💼', title: '연봉 협상 시즌', sub: `${dateOf(S.month).y}년 인건비 ${Math.round(WAGE_RAISE * 100)}% 인상`, body: `물가 상승으로 모든 직원의 월급이 ${Math.round(WAGE_RAISE * 100)}% 올랐어요<br>누적 인상률 <b class="neg">+${Math.round((Sim.wageMul() - 1) * 100)}%</b> · 인건비가 순이익을 잠식하지 않게 관리하세요`, buttons: [{ label: '확인' }] });
+    if (rep.wage) this.toast(`💼 ${dateOf(S.month).y}년 연봉 협상 · 지점별 근속 1년마다 월급 +${Math.round(WAGE_RAISE * 100)}% · 경력이 쌓여 능력 +5%`);
     if (rep.stage && rep.stage.won) { this.playEnding(); return; }
     if (rep.bigProfit) this.modal({ icon: '💡', title: '월 순이익 1억 돌파!', sub: '이제 진짜 기업이에요', body: '회사가 커져서 앞으로는 <b>건물 전기·수도 요금</b>이 매달 각 지점 비용으로 나가고, <b>매년 3월 법인세</b>(직전 1년 순이익에 누진세율 9~24% + 지방소득세 10%)를 내야 해요', buttons: [{ label: '알겠어요' }] });
     if (rep.tax) this.modal({ icon: '🧾', title: '법인세 납부', sub: `${dateOf(S.month).y}년 3월 · 누진세율 9~24% + 지방소득세`, body: `직전 1년 순이익 ${fmtMoney(rep.taxBase)}에 대한 법인세 <b class="neg">-${fmtMoney(rep.tax)}</b>을 냈어요`, buttons: [{ label: '성실 납세 완료' }] });
@@ -3091,6 +3257,7 @@ const UI = {
   // ---------- 대표 총 자산(보유 자산) 마일스톤 ----------
   milestones() {
     const S = Sim.S; const assets = S.cash + S.branches.reduce((a, b) => a + (b.invest || 0), 0);
+    if (this.rankReward('brand') || this.rankReward('ceo')) return true;
     if (assets >= 10000000 && !S.ms1000) {
       S.ms1000 = S.month; S.brandXP += 20;
       this.modal({ scene: 'ny_news', icon: '🗽', title: '뉴욕 경제 뉴스에 등장', sub: `총 자산 ${fmtMoney(assets)}`,
@@ -3112,6 +3279,25 @@ const UI = {
       return true;
     }
     return false;
+  },
+
+  // 순위가 처음으로 올라갈 때 리워드 (4위 1억 · 3위 2억 · 2위 5억 · 1위 10억)
+  rankReward(kind) {
+    const S = Sim.S; const r = kind === 'brand' ? Sim.rank().me : Sim.ceoRank().me;
+    // 첫 결산 때의 순위를 출발점으로 기록 (가문 상속금만으로 받는 리워드 방지)
+    if (!S.rankBest || !S.rankInit) { S.rankBest = { brand: Sim.rank().me, ceo: Sim.ceoRank().me }; S.rankInit = true; return false; }
+    const best = S.rankBest[kind]; if (r >= best) return false;
+    S.rankBest[kind] = r;
+    const tiers = Object.keys(RANK_REWARDS).map(Number).filter(t => t >= r && t < best);
+    const prize = tiers.reduce((a, t) => a + RANK_REWARDS[t], 0);
+    if (!prize) return false;
+    S.cash += prize; this.updHud(true);
+    const brand = kind === 'brand';
+    this.modal({ scene: 'end_award', icon: r === 1 ? '👑' : '🏅', title: brand ? `브랜드 순위 ${r}위 달성!` : `CEO 순자산 순위 ${r}위 달성!`,
+      sub: brand ? `${esc(S.brand)} · 코리빙 업계 랭킹` : `${esc(S.ceo)} 대표 · 부자 랭킹`,
+      body: `${brand ? `${esc(S.brand)}가 코리빙 브랜드 순위 <b>${r}위</b>에 올랐어요` : `${esc(S.ceo)} 대표가 업계 CEO 순자산 순위 <b>${r}위</b>에 올랐어요`}<br>순위 상승 리워드 <b class="pos">+${fmtMoney(prize)}</b>${r > 1 ? `<br><span class="muted">다음 목표: ${r - 1}위 리워드 ${fmtMoney(RANK_REWARDS[r - 1])}</span>` : ''}`,
+      buttons: [{ label: r === 1 ? '정상에 섰다!' : '더 높이 간다!', cls: 'y' }] });
+    return true;
   },
 
   // ---------- 신사업 뉴스: AI 데이터 붐 · 브랜드 광고 계약 ----------
@@ -3201,6 +3387,8 @@ const UI = {
         ] });
       return true;
     }
+    // 2-b) 스테이지가 오를수록 나오는 어려운 경영 결정 (각 1회)
+    if (this.stageDecision()) return true;
     // 3) 공간 대관 (게임 전체 3회: 아이돌 화보 · 뮤직비디오 · 방송)
     const open = S.branches.filter(b => b.status === 'open');
     const left = RENTALS.filter(r => !S.rentals.includes(r.id));
@@ -3232,6 +3420,66 @@ const UI = {
             : { label: o.label, cls: 'choice', sub: `비용 ${fmtMoney(o.cost)}${o.fat ? ' · 피로도 ' + (o.fat > 0 ? '+' : '') + o.fat : ''} · 가족 행복`, on: done(o.cost, o.fat) }) });
         return true;
       }
+    }
+    return false;
+  },
+  stageDecision() {
+    const S = Sim.S; S.decided = S.decided || [];
+    const open = S.branches.filter(b => b.status === 'open'); if (!open.length || Math.random() > 0.06) return false;
+    const can = id => !S.decided.includes(id);
+    const big = open.slice().sort((a, c) => Sim.rooms(c) - Sim.rooms(a))[0];
+    if (S.stage >= 3 && can('corpLease')) {
+      S.decided.push('corpLease');
+      this.modal({ hideFx: true, scene: 'corp', icon: '🏢', title: '대기업 통임대 제안', sub: big.name,
+        body: `대기업 인사팀이 ${esc(big.name)} 객실 40%를 2년간 통째로 빌리겠대요. 대신 월세를 크게 깎아 달래요<br><span class="muted">빈방 걱정은 사라지지만 커뮤니티 분위기가 달라질 수 있어요</span>`,
+        buttons: [
+          { label: '계약한다', cls: 'choice', sub: '빈방 즉시 채움 · 지점 월세 -12% (24개월) · 만족도 -4', on: () => {
+            const add = Math.min(Sim.rooms(big) - Sim.occ(big), Math.round(Sim.rooms(big) * 0.4)); big.occ.junior += add; Sim.addMod(big, 'rent', null, 0.88, 24); big.sat = clamp(big.sat - 4, 0, 100); this.renderPanel(); } },
+          { label: '정중히 거절', cls: 'choice', sub: '변화 없음', on: () => {} },
+        ] });
+      return true;
+    }
+    if (S.stage >= 4 && can('union')) {
+      S.decided.push('union');
+      this.modal({ hideFx: true, scene: 'quit', icon: '✊', title: '직원 노조 결성', sub: '전 지점 직원 대표',
+        body: '직원들이 노조를 만들고 임금 10% 인상과 휴게 공간을 요구해요',
+        buttons: [
+          { label: '요구를 받아들인다', cls: 'choice', sub: '인건비 +10% (영구) · CEO 피로도 -10 · 만족도 +2', on: () => { S.wageBonus = (S.wageBonus || 1) * 1.1; S.fatigue = clamp((S.fatigue || 0) - 10, 0, 100); open.forEach(b => b.sat = clamp(b.sat + 2, 0, 100)); } },
+          { label: '거부한다', cls: 'choice', sub: '파업으로 전 지점 만족도 -6 · 퇴실 증가 (2개월)', on: () => { open.forEach(b => { b.sat = clamp(b.sat - 6, 0, 100); Sim.addMod(b, 'churn', null, 0.03, 2); }); } },
+        ] });
+      return true;
+    }
+    if (S.stage >= 5 && can('rentCap')) {
+      S.decided.push('rentCap');
+      this.modal({ hideFx: true, scene: 'press', icon: '⚖️', title: '임대료 상한제 시행', sub: '정부 정책 발표',
+        body: '청년 주거비 부담을 줄이려고 정부가 공유주거 월세 인상 상한제를 도입한대요. 업계가 대응을 고민하고 있어요',
+        buttons: [
+          { label: '선제적으로 따른다', cls: 'choice', sub: '모든 지점 월세 기준가 +15% 상한 · 정부 인증으로 이후 클리어 목표 -15% · 브랜드 +30', on: () => { S.rentCap = 1.15; S.targetMul = 0.85; S.branches.forEach(b => { if (b.rentF > 1.15) b.rentF = 1.15; }); S.brandXP += 30; this.renderPanel(); } },
+          { label: '법무법인을 써서 예외를 인정받는다', cls: 'choice', sub: `비용 ${fmtMoney(150000)} · 월세 자유 유지 · 브랜드 -40 (여론 악화)`, on: () => { S.cash -= 150000; S.brandXP = Math.max(0, S.brandXP - 40); } },
+        ] });
+      return true;
+    }
+    if (S.stage >= 6 && can('acquire')) {
+      const c = S.competitors.slice().sort((a, d) => Sim.compScore(a) - Sim.compScore(d))[0];
+      S.decided.push('acquire');
+      this.modal({ hideFx: true, scene: 'corp', icon: '🤝', title: `경쟁 브랜드 「${c.name}」 인수 제안`, sub: '업계 재편',
+        body: `자금난에 빠진 ${c.name}가 회사를 통째로 팔겠대요`,
+        buttons: [
+          { label: '인수한다', cls: 'choice', sub: `비용 ${fmtMoney(ACQUIRE_COST)} · 경쟁사 하나 사라짐 · 브랜드 +120`, on: () => { S.cash -= ACQUIRE_COST; S.competitors = S.competitors.filter(x => x !== c); S.brandXP += 120; this.updHud(true); } },
+          { label: '지켜본다', cls: 'choice', sub: '다른 회사가 인수해 그 경쟁사가 더 커져요', on: () => { c.asset = Math.round(c.asset * 1.6); c.g *= 1.3; } },
+        ] });
+      return true;
+    }
+    if (S.stage >= 7 && can('rateHike')) {
+      S.decided.push('rateHike');
+      const fee = Math.round(S.loan * 0.02 / 10000) * 10000;
+      this.modal({ hideFx: true, scene: 'bank', icon: '📈', title: '기준금리 인상 · 대출 금리 재조정', sub: `대출 ${fmtMoney(S.loan)}`,
+        body: '중앙은행이 기준금리를 올려 은행이 대출 금리를 연 1.5%p 올리겠다고 통보했어요',
+        buttons: [
+          { label: '수수료를 내고 고정금리로 갈아탄다', cls: 'choice', sub: `비용 ${fmtMoney(fee)} (대출의 2%) · 금리 유지`, on: () => { S.cash -= fee; } },
+          { label: '오른 금리를 받아들인다', cls: 'choice', sub: '대출 이자 연 +1.5%p (영구)', on: () => { S.rateAdd = (S.rateAdd || 0) + 0.015; } },
+        ] });
+      return true;
     }
     return false;
   },
@@ -3303,7 +3551,7 @@ const UI = {
 
   // ---------- 월 결산 리포트 ----------
   monthReport(rep, cash0) {
-    const S = Sim.S; const d = dateStr(S.month - 1);
+    const S = Sim.S; const d = elapsedStr(S.month - 1);
     const open = S.branches.filter(x => x.last && !x.last.building);
     const cost = S.branches.reduce((a, x) => a + (x.last ? x.last.cost : 0), 0);
     const mi = open.reduce((a, x) => a + x.last.movein, 0), mo = open.reduce((a, x) => a + x.last.moveout, 0);
@@ -3444,7 +3692,7 @@ const UI = {
         <div class="end-credits"><h1>${esc(S.brand)}</h1><p>CO-LIVING TYCOON : SEOUL</p>
         <h2>CEO</h2><p>${esc(S.ceo)} · ${Sim.fam().name}</p>
         <h2>COO</h2><p>로제</p>
-        <h2>운영 기록</h2><p>운영 기간 ${S.month}개월 (${dateStr(0)} ~ ${dateStr(S.month)})</p><p>총 입주민 ${occ}명 / ${rooms}실</p><p>브랜드 레벨 ${Sim.lvl()} · 업계 랭킹 ${Sim.rank().me}위</p><p>순자산 ${fmtMoney(assets)}</p>
+        <h2>운영 기록</h2><p>운영 기간 ${spanStr(S.month)}</p><p>총 입주민 ${occ}명 / ${rooms}실</p><p>브랜드 레벨 ${Sim.lvl()} · 업계 랭킹 ${Sim.rank().me}위</p><p>순자산 ${fmtMoney(assets)}</p>
         <h2>지점</h2>${rows}
         <h2>인생</h2><p>${S.married ? '결혼 ✓' : '싱글'}${S.kids ? ` · 자녀 ${S.kids}명` : ''}</p><p>CEO 개인 지출 ${fmtMoney(S.ceoSpent || 0)}</p>${S.stake ? `<h2>투자</h2><p>싱가포르 투자 유치 ${fmtMoney(SG_INVEST)} · 지분 ${Math.round(S.stake * 100)}%</p>` : ""}
         <h2>THANK YOU FOR PLAYING</h2><p>모든 입주민과 직원들에게</p></div></div>`;
@@ -3477,6 +3725,17 @@ const UI = {
     const S = Sim.S; const b = Sim.findBranch(pe.bid); const e = EVENTS.find(x => x.id === pe.eid);
     if (!b || !e) return;
     const text = e.text(b, Sim);
+    // 오픈 1년이 지나고 담당 직원이 '우수' 이상이면 간단한 민원은 알아서 처리 (선택지 없이 알림만)
+    const ar = AUTO_RESOLVE[e.id];
+    if (ar && Sim.autoOK(b, ar[0]) && e.choices) {
+      const c = e.choices[ar[1]]; const lv = Sim.payLv(b, ar[0]); const cost = Math.round(c.cost(b, Sim) * (lv >= 3 ? 0 : lv >= 2 ? 0.5 : 1));
+      if (cost) { S.cash -= cost; b.pendingCost += cost; }
+      c.apply(b, Sim);
+      const who = STAFF.find(s => s.id === ar[0]).name;
+      this.toast(`${e.icon} ${b.name} ${e.title} → ${who}가 처리했어요${cost ? ` (${fmtMoney(cost)})` : ''}`);
+      this.renderPanel(); this.updHud(true);
+      return;
+    }
     if (e.auto) {
       e.apply(b, Sim);
       this.modal({ scene: e.id, icon: e.icon, title: e.title, sub: b.name, body: `${text}<br><b class="pos">${e.auto}</b>`, buttons: [{ label: '좋아요!' }] });
@@ -3494,7 +3753,7 @@ const UI = {
   modal(o) { this.mq.push(o); if (!this.modalOn) this.nextModal(); },
   nextModal() {
     const o = this.mq.shift(); const m = $('#modal');
-    if (!o) { this.modalOn = false; m.classList.add('hidden'); m.innerHTML = ''; return; }
+    if (!o) { this.modalOn = false; m.classList.add('hidden'); m.innerHTML = ''; this.flushToasts(); return; }
     this.modalOn = true; m.classList.remove('hidden');
     // hideFx: 선택지에는 비용만 보여주고, 효과는 고른 뒤 결과 팝업으로 공개
     const btns = (o.buttons || [{ label: '확인' }]).map(b => {
@@ -3526,7 +3785,13 @@ const UI = {
       return `<div class="fx-row ${cls}">${cls === 'pos' ? '▲' : cls === 'neg' ? '▼' : '•'} ${p}</div>`;
     }).join('');
   },
-  toast(t) { const d = document.createElement('div'); d.className = 'tst'; d.innerHTML = t; $('#toast').appendChild(d); setTimeout(() => d.remove(), 3300); while ($('#toast').children.length > 3) $('#toast').firstChild.remove(); },
+  // 팝업이 떠 있는 동안 안내는 대기했다가 팝업이 모두 닫히면 차례로 보여줌
+  toast(t) {
+    if (this.modalOn) { this.tq = (this.tq || []).concat([t]).slice(-4); return; }
+    this.showToast(t);
+  },
+  flushToasts() { const q = this.tq || []; this.tq = []; q.forEach((t, i) => setTimeout(() => this.showToast(t), i * 900)); },
+  showToast(t) { const d = document.createElement('div'); d.className = 'tst'; d.innerHTML = t; $('#toast').appendChild(d); setTimeout(() => d.remove(), 3300); while ($('#toast').children.length > 3) $('#toast').firstChild.remove(); },
   float(t, c, x, y) { const d = document.createElement('div'); d.className = 'floater'; d.textContent = t; d.style.color = c; d.style.left = x + '%'; d.style.top = y + '%'; $('#floaters').appendChild(d); setTimeout(() => d.remove(), 1900); },
 
   // ---------- HUD ----------
@@ -3535,12 +3800,12 @@ const UI = {
     $('#btnSpeed').textContent = 'x' + this.speed;
   },
   updHud(force) {
-    const S = Sim.S; if (!S || this.title) return;
+    const S = Sim.S; $('#app').classList.toggle('pre', !S || this.title || !S.branches.length); if (!S || this.title) return;
     const assetsTop = S.cash + S.branches.reduce((a, x) => a + (x.invest || 0), 0);
     $('#cash').textContent = fmtMoney(assetsTop); $('#cashBox').classList.toggle('neg', S.cash < 0);
     $('#monthFill').style.width = (this.prog * 100) + '%';
     const b = Sim.branch();
-    let lbl = dateStr(S.month);
+    let lbl = `${elapsedStr(S.month)} · ${dateOf(S.month).mo}월`;
     if (!S.branches.length) lbl += ' · 부지 선정 대기';
     else if (!this.running) lbl += ' · 일시정지';
     else if (b && b.status === 'build') lbl += ` · 공사 ${b.buildLeft}개월 남음`;
@@ -3569,6 +3834,7 @@ const UI = {
   // ---------- 패널 ----------
   renderPanel(scrollTop) {
     const p = $('#panel'); if (!Sim.S || this.title) return;
+    if (!this['tab_' + this.tab]) this.tab = 'home';
     document.querySelectorAll('.tab').forEach(t => t.classList.toggle('on', t.dataset.tab === this.tab));
     const y = p.scrollTop;
     p.innerHTML = this['tab_' + this.tab]();
@@ -3578,164 +3844,146 @@ const UI = {
   ctaHtml() {
     const S = Sim.S; const st = STAGES[S.stage - 1];
     if (S.stageStatus === 'select') return `<button class="cta" data-act="select">🗺️<span>STAGE ${S.stage} · ${st.area} 부지 선정하기<small>${st.title}</small></span></button>`;
-    if (st.multi && Sim.canPickMore()) return `<button class="cta" data-act="select">➕<span>신규 지점 개설 (${S.branches.length}/${STAGE8_GOAL_BRANCHES})<small>서울 통합 운영 · 남은 후보지에서 선택</small></span></button>`;
+    if (st.multi && Sim.canPickMore()) return `<button class="cta" data-act="select">➕<span>신규 지점 개설 (${S.branches.length}/${STAGE8_GOAL_BRANCHES})<small>남은 후보지에서 선택</small></span></button>`;
     return '';
   },
+  noBranch(msg) { return this.ctaHtml() + `<div class="card"><div class="muted">${msg}</div></div>`; },
+  stepper(act, id, n, max, unit, block) {
+    return `<div class="stepper"><button class="btn ghost" data-act="${act}" data-arg="${id}:-1" ${n <= 0 ? 'disabled' : ''}>−</button><b>${n}${unit}</b><button class="btn" data-act="${act}" data-arg="${id}:1" ${n >= max || block ? 'disabled' : ''}>+</button></div>`;
+  },
 
+  // 🏠 지점: 지점 상태 · 월세 · 손익 · 시설 투자
   tab_home() {
     const S = Sim.S; const b = Sim.branch();
     let h = this.ctaHtml();
     if (!b) return h + `<div class="card"><h3>아직 지점이 없어요</h3><div class="muted">부지를 선정하고 첫 코리빙을 개발하세요</div></div>`;
     const C = CONCEPTS[b.concept]; const land = Sim.land(b); const rooms = Sim.rooms(b); const occ = Sim.occ(b);
     h += `<div class="card"><h3>${esc(b.name)} <small>${land.name}</small></h3>
-      <div><span class="badge l">${C.name}</span><span class="badge">${SIZES[b.size].name} ${rooms}실</span><span class="badge y">${b.status === 'build' ? `공사중 · ${b.buildLeft}개월 남음` : `운영 ${b.monthsOpen}개월차`}</span></div></div>`;
+      <div><span class="badge l">${C.name}</span><span class="badge">${SIZES[b.size].name} ${rooms}실</span><span class="badge">${Sim.grade(b).name}</span><span class="badge y">${b.status === 'build' ? `공사중 · ${b.buildLeft}개월 남음` : `운영 ${spanStr(b.monthsOpen)}째`}</span></div></div>`;
     if (b.status === 'build') {
-      h += `<div class="card"><h3>🏗 공사 진행 중</h3><div class="muted">공사 중에는 수익이 없어요. 오픈 전 미리 운영 예산, 직원, 마케팅을 세팅해 두세요${Sim.lvl() >= 8 ? '<br><b class="pos">브랜드 Lv.8 — 사전 계약이 대기자로 쌓이고 있어요 (' + b.waitlist + '명)</b>' : ''}</div></div>`;
+      h += `<div class="card"><h3>🏗 공사 진행 중</h3><div class="muted">공사 중에는 수익이 없어요. 오픈 전에 운영·마케팅을 미리 세팅해 두세요${Sim.lvl() >= 8 ? `<br><b class="pos">사전 계약 대기자 ${b.waitlist}명</b>` : ''}</div></div>`;
     } else {
-      const sh = Sim.segShare(b);
-      h += `<div class="card"><h3>입주 현황 <small>${occ} / ${rooms}실 · 대기자 ${b.waitlist}</small></h3>
-        <div class="bar"><i style="width:${occ / rooms * 100}%;background:${occ / rooms >= 0.95 ? 'var(--lime)' : 'var(--yellow)'}"></i></div>
+      h += `<div class="card"><h3>입주 현황 <small>${occ} / ${rooms}실</small></h3>
+        <div class="bar big"><i style="width:${occ / rooms * 100}%;background:${occ / rooms >= 0.95 ? 'var(--lime)' : 'var(--yellow)'}"></i></div>
         <div style="margin-top:8px" class="stack">${SEGS.map(k => `<i style="width:${occ ? b.occ[k] / occ * 100 : 0}%;background:${SEG_INFO[k].color}"></i>`).join('')}</div>
-        <div class="legend">${SEGS.map(k => `<span><em style="background:${SEG_INFO[k].color}"></em>${SEG_INFO[k].short} ${b.occ[k]}</span>`).join('')}</div>
-        <div class="row" style="margin-top:6px"><span class="k">만족도</span><span class="v ${b.sat >= 80 ? 'pos' : b.sat < 50 ? 'neg' : ''}">${Math.round(b.sat)} ${b.sat >= 90 ? '🔥 바이럴' : b.sat >= 70 ? '😊 건강' : b.sat > 50 ? '😐' : b.sat > 30 ? '😟 재계약 감소' : '😱 대량 퇴실 위험'}</span></div>
-        <div class="row"><span class="k">시설 상태</span><span class="v ${b.cond < 50 ? 'neg' : ''}">${Math.round(b.cond)} / 100</span></div></div>`;
+        <div class="legend">${SEGS.filter(k => b.occ[k]).map(k => `<span><em style="background:${SEG_INFO[k].color}"></em>${SEG_INFO[k].short} ${b.occ[k]}</span>`).join('')}</div>
+        <div class="kv2"><div><small>만족도</small><b class="${b.sat >= 80 ? 'pos' : b.sat < 50 ? 'neg' : ''}">${Math.round(b.sat)}</b></div><div><small>시설 상태</small><b class="${b.cond < 50 ? 'neg' : ''}">${Math.round(b.cond)}</b></div><div><small>대기자</small><b>${b.waitlist}</b></div></div></div>`;
       if (b.last && !b.last.building) {
-        const L = b.last;
-        h += `<div class="card"><h3>지난달 입주 퍼널</h3>
-          <div class="funnel"><div><b>${L.inq}</b><small>문의</small></div><div class="arr">▶</div><div><b>${L.tours}</b><small>투어</small></div><div class="arr">▶</div><div><b>${L.apps}</b><small>지원</small></div><div class="arr">▶</div><div><b>${L.cons}</b><small>계약</small></div><div class="arr">▶</div><div><b class="pos">${L.movein}</b><small>입주</small></div></div>
-          <div class="row" style="margin-top:6px"><span class="k">퇴실</span><span class="v neg">-${L.moveout} (월 ${pct(L.churn)})</span></div>
-          ${L.ref ? `<div class="row"><span class="k">추천 입주 계약</span><span class="v pos">+${L.ref}</span></div>` : ''}
-          ${L.fromWait ? `<div class="row"><span class="k">대기자에서 입주</span><span class="v pos">+${L.fromWait}</span></div>` : ''}
-          ${L.movein < L.cons * 0.8 - 1 ? '<div class="muted">빈방이 없어 계약을 다 받지 못했어요' + (Sim.lvl() < 5 ? ' (브랜드 Lv.5부터 대기자 등록)' : '') + '</div>' : ''}</div>`;
-        const c = L.costs;
-        h += `<div class="card"><h3>지난달 손익 <small>지점 기준</small></h3>
+        const L = b.last, c = L.costs;
+        h += `<div class="card"><h3>지난달 입주 <small>퇴실률 ${pct(L.churn)}</small></h3>
+          <div class="funnel"><div><b>${L.inq}</b><small>문의</small></div><div class="arr">▶</div><div><b>${L.tours}</b><small>투어</small></div><div class="arr">▶</div><div><b>${L.cons}</b><small>계약</small></div><div class="arr">▶</div><div><b class="pos">+${L.movein}</b><small>입주</small></div><div><b class="neg">-${L.moveout}</b><small>퇴실</small></div></div></div>`;
+        h += `<details class="card"><summary><h3>지난달 손익 <small class="${L.profit >= 0 ? 'pos' : 'neg'}">${fmtMoney(L.profit, true)} ▾</small></h3></summary>
           <div class="row"><span class="k">월세 매출</span><span class="v pos">${fmtMoney(L.rentRev != null ? L.rentRev : L.revenue)}</span></div>
-          ${L.extra && L.extra.member ? `<div class="row"><span class="k">커뮤니티 멤버십</span><span class="v pos">+${fmtMoney(L.extra.member)}</span></div>` : ''}
-          ${L.extra && L.extra.data ? `<div class="row"><span class="k">AI 데이터 제휴 수익</span><span class="v pos">+${fmtMoney(L.extra.data)}</span></div>` : ''}
-          ${L.extra && L.extra.ads ? `<div class="row"><span class="k">엘리베이터 광고 수익</span><span class="v pos">+${fmtMoney(L.extra.ads)}</span></div>` : ''}
+          ${L.extra && L.extra.total ? `<div class="row"><span class="k">부가 수익 (멤버십·데이터·광고)</span><span class="v pos">+${fmtMoney(L.extra.total)}</span></div>` : ''}
           <div class="row"><span class="k">운영 예산</span><span class="v">-${fmtMoney(c.budget)}</span></div>
           <div class="row"><span class="k">인건비</span><span class="v">-${fmtMoney(c.staff)}</span></div>
-          <div class="row"><span class="k">건물 유지비</span><span class="v">-${fmtMoney(c.maint)}</span></div>
-          ${c.util ? `<div class="row"><span class="k">전기·수도 요금</span><span class="v">-${fmtMoney(c.util)}</span></div>` : ''}
-          <div class="row"><span class="k">마케팅 채널</span><span class="v">-${fmtMoney(c.channels)}</span></div>
-          ${c.boost ? `<div class="row"><span class="k">프리미엄 마케팅 추가비 (x${b.boost})</span><span class="v">-${fmtMoney(c.boost)}</span></div>` : ''}
-          <div class="row"><span class="k">커뮤니티 이벤트</span><span class="v">-${fmtMoney(c.events)}</span></div>
-          ${c.service ? `<div class="row"><span class="k">서비스 유지비</span><span class="v">-${fmtMoney(c.service)}</span></div>` : ''}
-          ${L.eventCost ? `<div class="row"><span class="k">돌발 상황 대응</span><span class="v">-${fmtMoney(L.eventCost)}</span></div>` : ''}
-          <div class="row" style="border-top:2px dashed #1f5257;margin-top:4px;padding-top:6px"><span class="k">지점 순이익</span><span class="v ${L.profit >= 0 ? 'pos' : 'neg'}">${fmtMoney(L.profit, true)}</span></div>
-          <div class="muted">회사 전체 대출 이자 ${fmtMoney(S.lastInterest || 0)}는 별도예요</div></div>`;
+          <div class="row"><span class="k">건물 유지비${c.util ? '·전기수도' : ''}</span><span class="v">-${fmtMoney(c.maint + (c.util || 0))}</span></div>
+          <div class="row"><span class="k">마케팅</span><span class="v">-${fmtMoney(c.channels + (c.boost || 0))}</span></div>
+          <div class="row"><span class="k">커뮤니티·서비스·돌발</span><span class="v">-${fmtMoney(c.events + c.service + (L.eventCost || 0))}</span></div>
+          <div class="row tot"><span class="k">지점 순이익</span><span class="v ${L.profit >= 0 ? 'pos' : 'neg'}">${fmtMoney(L.profit, true)}</span></div></details>`;
       }
     }
-    // 월세
     h += `<div class="card" id="rentCard">${this.rentCardHtml(b)}</div>`;
-    h += `<div class="card" id="memberCard">${this.memberCardHtml(b)}</div><div class="card">${this.bizCardHtml(b)}`;
-    // 건물 정보
-    h += `<div class="card"><h3>건물 정보 <small>운영하며 매달 1개씩 공개</small></h3>${HIDDEN_NAMES.map((n, i) => {
+    h += `<div class="card">${this.bizCardHtml(b)}`;
+    h += `<details class="card"><summary><h3>서비스 업그레이드 <small>▾</small></h3></summary>${UPGRADES.map(u => {
+      const cost = Sim.upgradeCost(b, u); const has = b.upgrades[u.id];
+      return `<div class="toggle-item"><div class="info"><b>${u.name}</b><small>${u.desc}</small></div>${has ? '<span class="badge l">설치됨</span>' : `<button class="btn" data-act="upgrade" data-arg="${u.id}" ${S.cash < cost ? 'disabled' : ''}>${fmtMoney(cost)}</button>`}</div>`;
+    }).join('')}</details>`;
+    h += `<details class="card"><summary><h3>건물 정보 <small>매달 1개씩 공개 ▾</small></h3></summary>${HIDDEN_NAMES.map((n, i) => {
       if (!b.revealed[i]) return `<div class="hidden-stat"><span>${n}</span><span class="pips">${'<i></i>'.repeat(5)}</span><span class="muted">???</span></div>`;
       const v = land.hidden[i]; const [t, c] = this.hiddenLabel(i, v); const on = Math.max(1, Math.round(v / 20));
       return `<div class="hidden-stat"><span>${n}</span><span class="pips">${[0, 1, 2, 3, 4].map(k => `<i class="${k < on ? 'on ' + c : ''}"></i>`).join('')}</span><span class="${c === 'good' ? 'pos' : c === 'bad' ? 'neg' : ''}">${t}</span></div>`;
-    }).join('')}</div>`;
-    // 업그레이드
-    h += `<div class="card"><h3>서비스 업그레이드 <small>입주민 선호 충족</small></h3>${UPGRADES.map(u => {
-      const cost = Sim.upgradeCost(b, u); const has = b.upgrades[u.id];
-      return `<div class="toggle-item"><div class="info"><b>${u.name}</b><small>${u.desc}</small></div>${has ? '<span class="badge l">설치됨</span>' : `<button class="btn" data-act="upgrade" data-arg="${u.id}" ${S.cash < cost ? 'disabled' : ''}>${fmtMoney(cost)}</button>`}</div>`;
-    }).join('')}
-      <div class="muted" style="margin-top:6px">선호: ${SEGS.map(k => `${SEG_INFO[k].short}(${SEG_INFO[k].prefs.join('·')}) ${'★'.repeat(Sim.prefMatch(b, k))}${'☆'.repeat(2 - Sim.prefMatch(b, k))}`).join(' / ')}</div></div>`;
+    }).join('')}</details>`;
     return h;
   },
 
   memberCardHtml(b) {
     const f = b.member || 0, occ = Sim.occ(b), r = Sim.memberRate(b);
-    const est = Math.round(occ * f * r), satD = f ? 2 - Math.max(0, f - 8) * 0.35 : 0;
-    return `<h3>🎟️ 커뮤니티 멤버십 <small>월세 외 부가 수익</small></h3>
-      <div class="slider"><div class="top"><span>${f ? '입주민 1인당 월 가입비' : '멤버십 미운영'}</span><b>${f ? f + '만원' : 'OFF'}</b></div>
+    const est = Math.round(occ * f * r);
+    return `<h3>🎟️ 커뮤니티 멤버십</h3>
+      <div class="slider"><div class="top"><span>${f ? '1인당 월 가입비' : '운영 안 함'}</span><b>${f ? f + '만원' : 'OFF'}</b></div>
       <input type="range" min="0" max="${MEMBER_MAX}" step="1" value="${f}" data-slider="member"></div>
-      <div class="muted">${f ? `참여율 ${pct(r)} · 예상 월 수익 <b class="pos">${fmtMoney(est)}</b> · 만족도 ${satD >= 0 ? '+' : ''}${satD.toFixed(1)}` : '0이면 운영하지 않아요. 1만~30만원으로 설정하세요'}<br>가입비가 비쌀수록 참여율이 떨어지고 불만이 생겨요. 커뮤니티 예산·이벤트가 참여율을 올려요</div>`;
+      <div class="muted">${f ? `참여율 ${pct(r)} · 예상 월 수익 <b class="pos">${fmtMoney(est)}</b>` : '1만~30만원으로 정하면 부가 수익이 생겨요'}</div>`;
   },
   bizCardHtml(b) {
     const S = Sim.S; const lvl = Sim.lvl(); const ex = Sim.extraRev(b, Sim.occ(b));
-    return `<h3>🚀 신사업 <small>한 번 개발하면 매달 수익</small></h3>${BIZ.map(z => {
+    return `<h3>🚀 신사업</h3>${BIZ.map(z => {
       const has = b.biz && b.biz[z.id]; const cost = Sim.bizCost(b, z); const lock = lvl < z.lvl;
-      return `<div class="toggle-item"><div class="info"><b>${z.name}</b><small>${z.desc}</small>${has ? `<small><span class="pos">${z.rev} 월 ${fmtMoney(ex[z.id])}</span>${z.id === 'data' && Sim.dataMul() > 1 ? ` · AI 특수 ×${Sim.dataMul()}` : ''}${z.id === 'ads' && Sim.adMul() > 1 ? ` · 브랜드 광고 계약 ×${Sim.adMul().toFixed(2)}` : ''}</small>` : `<small>${SIZES[b.size].name} 규모 기준 개발비 · 수익은 운영을 시작해야 알 수 있어요</small>`}</div>
-        ${has ? '<span class="badge l">운영중</span>' : lock ? `<span class="badge">🔒 브랜드 Lv.${z.lvl}</span>` : `<button class="btn" data-act="biz" data-arg="${z.id}" ${S.cash < cost ? 'disabled' : ''}>${fmtMoney(cost)}</button>`}</div>`;
+      return `<div class="toggle-item"><div class="info"><b>${z.name}</b>${has ? `<small class="pos">${z.rev} 월 ${fmtMoney(ex[z.id])}${z.id === 'data' && Sim.dataMul() > 1 ? ` (AI 특수 ×${Sim.dataMul()})` : ''}${z.id === 'ads' && Sim.adMul() > 1 ? ` (광고 계약 ×${Sim.adMul().toFixed(2)})` : ''}</small>` : `<small>${z.desc}</small>`}</div>
+        ${has ? '<span class="badge l">운영중</span>' : lock ? `<span class="badge">🔒 Lv.${z.lvl}</span>` : `<button class="btn" data-act="biz" data-arg="${z.id}" ${S.cash < cost ? 'disabled' : ''}>${fmtMoney(cost)}</button>`}</div>`;
     }).join('')}</div>`;
+  },
+  rentCardHtml(b) {
+    const S = Sim.S; const base = Sim.baseRent(b), rent = Sim.rentNow(b), f = b.rentF;
+    const inqMul = Sim.rentMulAvg(b); const satD = f > 1 ? -Math.min(45, (f - 1) * 40) : (1 - f) * 15;
+    const max = S.rentCap ? Math.min(RENT_MAX, Math.floor(base * S.rentCap / 5) * 5) : RENT_MAX;
+    return `<h3>월세 <small>기준 ${base}만원${S.rentCap ? ' · 상한제' : ''}</small></h3>
+      <div class="slider"><div class="top"><span>${f > 1 ? '인상' : f < 1 ? '할인' : '기준가'} ${Math.abs(f - 1) > 0.001 ? (f > 1 ? '+' : '') + Math.round((f - 1) * 100) + '%' : ''}</span><b>${rent}만원</b></div>
+      <input type="range" min="${RENT_MIN}" max="${max}" step="5" value="${rent}" data-slider="rent"></div>
+      <div class="muted">문의 ×${inqMul.toFixed(2)} · 만족도 ${satD >= 0 ? '+' : ''}${Math.round(satD)} · 비싸게 받으려면 📣 마케팅 탭의 프리미엄 마케팅을 써요</div>`;
   },
   boostHtml(b) {
     const x = b.boost || 1; const c = Sim.costs(b);
-    return `<div class="boost-box"><div class="row"><span><b>📢 프리미엄 마케팅</b><br><small class="muted">비싼 월세로 팔 때 광고를 키워 입주민을 모아요</small></span>
-      <div class="stepper"><button class="btn ghost" data-act="boost" data-arg="-1" ${x <= 1 ? 'disabled' : ''}>−</button><b>x${x}</b><button class="btn" data-act="boost" data-arg="1" ${x >= BOOST_MAX ? 'disabled' : ''}>+</button></div></div>
-      <div class="muted">${x > 1 ? `문의 ×${Sim.boostInq(b).toFixed(2)} · 고가 월세 망설임 ${Math.round(5 * (x - 1))}% 감소 · 추가 마케팅비 <b class="neg">월 ${fmtMoney(c.boost)}</b>` : 'x2~x5로 올리면 마케팅 채널비와 마케팅 예산이 그 배수만큼 커져요'}</div></div>`;
-  },
-  rentCardHtml(b) {
-    const base = Sim.baseRent(b), rent = Sim.rentNow(b), f = b.rentF;
-    const inqMul = Sim.rentMulAvg(b); const satD = f > 1 ? -Math.min(45, (f - 1) * 40) : (1 - f) * 15;
-    const ex = SEGS.map(k => `${SEG_INFO[k].short} ×${Sim.rentMul(b, k).toFixed(2)}`).join(' · ');
-    return `<h3>월세 설정 <small>${Sim.grade(b).name} 기준 ${base}만원</small></h3>
-      <div class="slider"><div class="top"><span>${f > 1 ? '인상' : f < 1 ? '할인' : '기준가'} ${Math.abs(f - 1) > 0.001 ? (f > 1 ? '+' : '') + Math.round((f - 1) * 100) + '%' : ''}</span><b>${rent}만원</b></div>
-      <input type="range" min="${RENT_MIN}" max="${RENT_MAX}" step="5" value="${rent}" data-slider="rent"></div>
-      <div class="muted">${RENT_MIN}만 ~ ${RENT_MAX}만원 · 문의 ×${inqMul.toFixed(2)} · 만족도 ${satD >= 0 ? '+' : ''}${Math.round(satD)}<br>가격 민감도 ${ex}<br>숫자는 해당 입주민 문의 배율 · 외국계 직장인은 비싸도 문의가 덜 줄고, 대학생이 가장 민감해요</div>${this.boostHtml(b)}`;
+    return `<h3>📢 프리미엄 마케팅 <small>비싼 월세로 팔 때</small></h3>
+      <div class="toggle-item"><div class="info"><b>광고 증액 x${x}</b><small>${x > 1 ? `문의 ×${Sim.boostInq(b).toFixed(2)} · 망설임 ${Math.round(5 * (x - 1))}% 감소 · <span class="neg">월 +${fmtMoney(c.boost)}</span>` : 'x2~x5로 올리면 마케팅비가 배수만큼 커져요'}</small></div>
+      <div class="stepper"><button class="btn ghost" data-act="boost" data-arg="-1" ${x <= 1 ? 'disabled' : ''}>−</button><b>x${x}</b><button class="btn" data-act="boost" data-arg="1" ${x >= BOOST_MAX ? 'disabled' : ''}>+</button></div></div>`;
   },
 
+  // 🔧 운영: 예산 · 직원 · 커뮤니티 · 멤버십 · 만족도
   tab_ops() {
-    const S = Sim.S; const b = Sim.branch();
+    const S = Sim.S; const b = Sim.branch(); if (!b) return this.noBranch('지점이 생기면 운영할 수 있어요');
+    const sc = Sim.scale(b); const c = Sim.costs(b);
+    const items = [['clean', '🧹 청소'], ['fac', '🔧 시설관리'], ['mkt', '📢 마케팅'], ['comm', '🎈 커뮤니티']];
     let h = this.ctaHtml();
-    if (b) {
-      const sc = Sim.scale(b);
-      const items = [['clean', '🧹 청소', '만족도 · 주방 위생 민원 감소'], ['fac', '🔧 시설관리', '시설 상태 회복 · 고장 감소'], ['mkt', '📢 마케팅', '기본 문의 수 (0→1배, 100→2배)'], ['comm', '🎈 커뮤니티', '만족도 · 재계약률 · 크리에이터 선호']];
-      const c = Sim.costs(b);
-      h += `<div class="card"><h3>월 운영 예산 <small>${esc(b.name)} · 월 ${fmtMoney(c.budget)}</small></h3>
-        ${items.map(([k, n, d]) => `<div class="slider"><div class="top"><span>${n} <small class="muted">${d}</small></span><b>${b.budget[k]} · ${fmtMoney(Math.round(b.budget[k] * sc))}</b></div>
-        <input type="range" min="0" max="100" step="5" value="${b.budget[k]}" data-slider="budget" data-k="${k}"></div>`).join('')}</div>`;
-      const parts = Sim.satParts(b); const tgt = Sim.satTarget(b);
-      h += `<div class="card"><h3>만족도 예측 <small>현재 ${Math.round(b.sat)} → 목표 ${Math.round(tgt)}</small></h3>
-        <div class="bar"><i style="width:${tgt}%;background:${tgt >= 80 ? 'var(--lime)' : tgt >= 50 ? 'var(--yellow)' : 'var(--red)'}"></i></div>
-        <div style="margin-top:6px">${parts.map(p => `<div class="row" style="padding:1px 0"><span class="k">${p[0]}</span><span class="v ${p[1] > 0 && p[0] !== '기본' ? 'pos' : p[1] < 0 ? 'neg' : ''}">${p[0] === '???' ? '???' : (p[1] > 0 && p[0] !== '기본' ? '+' : '') + p[1].toFixed(1)}</span></div>`).join('')}</div>
-        <div class="muted">만족도는 매달 목표치 쪽으로 40%씩 움직여요 · 90+ 바이럴 · 70+ 건강 · 50↓ 재계약 감소 · 30↓ 대량 퇴실</div></div>`;
-      h += `<div class="card"><h3>시설 상태 <small>${Math.round(b.cond)} / 100</small></h3><div class="bar"><i style="width:${b.cond}%;background:${b.cond >= 60 ? 'var(--lime)' : 'var(--red)'}"></i></div>
-        <div class="muted" style="margin-top:4px">시설이 낡으면 고장 이벤트가 잦아져요. 건물 유지비 월 ${fmtMoney(c.maint)}</div></div>`;
-    }
-    const avail = S.loanCap - S.loan;
-    h += `<div class="card"><h3>💰 재무 <small>회사 전체</small></h3>
-      <div class="row"><span class="k">현금</span><span class="v ${S.cash < 0 ? 'neg' : 'pos'}">${fmtMoney(S.cash)}</span></div>
-      <div class="row"><span class="k">대출 잔액 / 한도</span><span class="v">${fmtMoney(S.loan)} / ${fmtMoney(S.loanCap)}</span></div>
-      <div class="row"><span class="k">월 이자 (연 ${Sim.rateYear()}%)</span><span class="v neg">-${fmtMoney(Math.round(S.loan * Sim.rate()))}</span></div>
-      <div style="display:flex;gap:6px;margin-top:6px"><button class="btn" style="flex:1" data-act="borrow" ${avail < 100000 ? 'disabled' : ''}>+10억 대출</button><button class="btn y" style="flex:1" data-act="repay" ${S.loan < 100000 || S.cash < 100000 ? 'disabled' : ''}>10억 상환</button></div>
-      <div class="row"><span class="k">미납 이자 (연체 가산 월 1.5%)</span><span class="v ${S.unpaid ? 'neg' : ''}">${fmtMoney(S.unpaid || 0)}</span></div>
-      <div class="row"><span class="k">이자 보류 횟수</span><span class="v ${(S.deferCount || 0) >= DEFER_WARN ? 'neg' : ''}">${S.deferCount || 0} / ${DEFER_SEIZE}회 ${(S.deferCount || 0) >= DEFER_WARN ? '⚠️ 은행 경고' : ''}</span></div>
-      <div style="display:flex;gap:6px;margin-top:6px"><button class="btn ${S.deferNext ? 'r' : 'ghost'}" style="flex:1" data-act="defer">${S.deferNext ? '✓ 다음 달 이자 보류 예약됨' : '다음 달 이자 보류'}</button><button class="btn y" style="flex:1" data-act="payunpaid" ${!S.unpaid || S.cash < S.unpaid ? 'disabled' : ''}>미납 이자 상환</button></div>
-      <div class="muted" style="margin-top:4px">이자를 보류하면 당장 현금은 지키지만, ${DEFER_WARN}회부터 은행이 찾아오고 ${DEFER_SEIZE}회가 되면 가장 비싼 건물을 압류해요</div></div>`;
-    return h;
-  },
-
-  tab_people() {
-    const S = Sim.S; const b = Sim.branch(); if (!b) return this.ctaHtml() + '<div class="card"><div class="muted">지점이 생기면 직원을 채용할 수 있어요</div></div>';
-    const sc = Sim.scale(b);
-    const step = (act, id, n, max, unit, blockText) => `<div class="stepper"><button class="btn ghost" data-act="${act}" data-arg="${id}:-1" ${n <= 0 ? 'disabled' : ''}>−</button><b>${n}${unit}</b><button class="btn" data-act="${act}" data-arg="${id}:1" ${n >= max || blockText ? 'disabled' : ''}>+</button></div>${blockText ? `<small class="neg" style="display:block;text-align:right;margin-top:2px">${blockText}</small>` : ''}`;
-    let h = `<div class="card"><h3>직원 <small>직무별 최대 ${STAFF_MAX}명 · 규모 ×${Sim.sizeMul(b)} · 연차 인상 +${Math.round((Sim.wageMul() - 1) * 100)}%</small></h3>${STAFF.map(s => {
+    const tgt = Sim.satTarget(b);
+    h += `<div class="card"><h3>만족도 <small>지금 ${Math.round(b.sat)} → 목표 ${Math.round(tgt)}</small></h3><div class="bar big"><i style="width:${tgt}%;background:${tgt >= 80 ? 'var(--lime)' : tgt >= 50 ? 'var(--yellow)' : 'var(--red)'}"></i></div>
+      <details><summary class="muted">무엇이 만족도를 바꾸나요? ▾</summary>${Sim.satParts(b).filter(p => p[0] !== '기본').map(p => `<div class="row"><span class="k">${p[0]}</span><span class="v ${p[1] > 0 ? 'pos' : p[1] < 0 ? 'neg' : ''}">${p[0] === '???' ? '???' : (p[1] > 0 ? '+' : '') + p[1].toFixed(1)}</span></div>`).join('')}</details></div>`;
+    h += `<div class="card"><h3>월 운영 예산 <small>월 ${fmtMoney(c.budget)}</small></h3>
+      ${items.map(([k, n]) => `<div class="slider"><div class="top"><span>${n}</span><b>${b.budget[k]} · ${fmtMoney(Math.round(b.budget[k] * sc))}</b></div>
+      <input type="range" min="0" max="100" step="5" value="${b.budget[k]}" data-slider="budget" data-k="${k}"></div>`).join('')}</div>`;
+    h += `<div class="card"><h3>👥 직원 <small>근속 ${Sim.staffYears(b)}년 · 연 ${Math.round(WAGE_RAISE * 100)}% 인상</small></h3>${STAFF.map(s => {
       const n = Sim.stN(b, s.id); const vac = b.vacant && b.vacant[s.id] > S.month ? `공석 · ${b.vacant[s.id] - S.month}개월 후 충원` : '';
-      return `<div class="toggle-item"><div class="info"><b>${s.name}</b><small>1인당 월 ${fmtMoney(Sim.staffPay(b, s))} · ${s.eff}</small>${n ? `<small class="pos">현재 ${n}명 · 월 ${fmtMoney(Sim.staffPay(b, s) * n)}</small>` : ''}</div><div>${step('staffn', s.id, n, STAFF_MAX, '명', vac)}</div></div>`;
-    }).join('')}<div class="muted" style="margin-top:4px">같은 직무를 더 뽑으면 효과가 커지지만 점점 줄어요 (첫째 100% · 둘째 50% · 셋째 25%)</div></div>`;
-    h += `<div class="card"><h3>커뮤니티 이벤트 <small>월 회차 설정 · 이번 달 총 ${Sim.sessions(b)}회</small></h3>${COMM_EVENTS.map(e => {
+      const lv = Sim.payLv(b, s.id); const G = PAY_GRADES[lv];
+      return `<div class="staff-item"><div class="toggle-item"><div class="info"><b>${s.name}</b><small>${vac ? `<span class="neg">${vac}</span>` : `1인 월 ${fmtMoney(Sim.staffPay(b, s))} · ${s.eff}`}</small></div>${this.stepper('staffn', s.id, n, STAFF_MAX, '명', vac)}</div>
+        <div class="grade-row"><button class="btn ghost sm" data-act="grade" data-arg="${s.id}:-1" ${lv <= 0 ? 'disabled' : ''}>▼</button>
+          <span class="g-name g${lv}">${G.name}</span><span class="g-info">능력 ×${Sim.ab(b, s.id).toFixed(2)}${lv >= 2 ? ` · ${G.perk}` : ''}${lv >= 3 ? ` · ${s.ace}` : ''}${n ? (Sim.autoOK(b, s.id) ? ' · <span class="pos">민원 자동 처리</span>' : '') : ''}</span>
+          <button class="btn sm" data-act="grade" data-arg="${s.id}:1" ${lv >= PAY_GRADES.length - 1 ? 'disabled' : ''}>연봉 ▲</button></div></div>`;
+    }).join('')}<div class="muted">연봉 등급을 올리면 월급이 오르는 만큼 능력이 커지고, 베테랑·에이스는 특기가 생겨요<br>오픈 1년 차까지는 민원을 대표님이 직접 처리하고, 그 뒤엔 '우수' 등급 이상 직원이 간단한 민원을 알아서 처리해요${b.status === 'open' && (b.monthsOpen || 0) < AUTO_OPEN_MONTHS ? ` <b>(자동 처리까지 ${AUTO_OPEN_MONTHS - (b.monthsOpen || 0)}개월)</b>` : ''}</div></div>`;
+    h += `<div class="card"><h3>🎉 커뮤니티 이벤트 <small>월 ${Sim.sessions(b)}회</small></h3>${COMM_EVENTS.map(e => {
       const n = Sim.evN(b, e.id);
-      return `<div class="toggle-item"><div class="info"><b>${e.name}</b><small>1회 ${fmtMoney(Math.round(e.cost * sc))} · ${e.eff}</small>${n ? `<small class="pos">월 ${n}회 · ${fmtMoney(Math.round(e.cost * sc * n))}</small>` : ''}</div><div>${step('eventn', e.id, n, EVENT_MAX, '회', '')}</div></div>`;
-    }).join('')}
-      <div class="muted" style="margin-top:4px">회차를 늘리면 만족도·재계약이 더 올라요 (최대 +12) · 멤버십 가입비 불만을 회차당 0.8씩 상쇄하고 참여율도 올려요</div></div>`;
+      return `<div class="toggle-item"><div class="info"><b>${e.name}</b><small>1회 ${fmtMoney(Math.round(e.cost * sc))}</small></div>${this.stepper('eventn', e.id, n, EVENT_MAX, '회', '')}</div>`;
+    }).join('')}</div>`;
+    h += `<div class="card" id="memberCard">${this.memberCardHtml(b)}</div>`;
     return h;
   },
 
-  tab_brand() {
-    const S = Sim.S; const lv = Sim.lvl(); const g = Sim.goalState(); const st = STAGES[S.stage - 1];
+  // 📣 마케팅: 채널 · 프리미엄 마케팅 · 예상 문의
+  tab_mkt() {
+    const S = Sim.S; const b = Sim.branch(); if (!b) return this.noBranch('지점이 생기면 마케팅을 할 수 있어요');
+    const tot = CHANNELS.reduce((a, c) => a + (b.channels[c.id] ? Sim.chCost(b, c) : 0), 0);
+    const est = Sim.inquiries(b, true); const inq = Math.round(SEGS.reduce((a, k) => a + est[k], 0)); const r = Sim.rates(b);
     let h = this.ctaHtml();
-    h += `<div class="card"><h3>⭐ 브랜드 레벨 ${lv} <small>${BRAND_NAMES[lv]}</small></h3>
-      <div class="bar"><i style="width:${Sim.lvlProgress() * 100}%;background:var(--yellow)"></i></div>
-      <div class="muted" style="margin-top:4px">${lv < 10 ? `다음 레벨까지 ${Math.ceil(BRAND_XP[lv] - S.brandXP)}pt · ` : ''}높은 입주율·만족도, 유튜브 캠페인, 언론 노출로 성장해요</div>
-      <div style="margin-top:6px">${BRAND_PERKS.map(p => `<div class="goal ${lv >= p.lv ? 'ok' : ''}"><span class="ck">${lv >= p.lv ? '✓' : ''}</span>Lv.${p.lv} ${p.text}</div>`).join('')}</div></div>`;
-    h += `<div class="card"><h3>🎯 STAGE ${S.stage} 목표 <small>${st.area}</small></h3>${this.goalsHtml(g)}</div>`;
-    h += `<div class="card"><h3>🏢 지점 목록 <small>${S.branches.length}개</small></h3>${S.branches.map((b, i) => `<div class="br-item ${i === S.sel ? 'cur' : ''}" data-act="selbranch" data-arg="${i}">
-      <span class="nm">${esc(b.name)}</span><span>${b.status === 'build' ? '🏗 공사중' : `${Math.round(Sim.occ(b) / Sim.rooms(b) * 100)}% · 😊${Math.round(b.sat)}`}</span><span class="${b.last && b.last.profit >= 0 ? 'pos' : 'neg'}">${b.last ? fmtMoney(b.last.profit, true) : '-'}</span></div>`).join('') || '<div class="muted">아직 없어요</div>'}</div>`;
-    const r = Sim.rank();
-    h += `<div class="card"><h3>🏆 업계 랭킹 <small>현재 ${r.me}위</small></h3>${r.list.map((x, i) => `<div class="rank-row ${x.me ? 'me' : ''}"><span class="no">${i + 1}</span><span class="nm">${esc(x.name)}</span><span>${x.score}</span></div>`).join('')}
-      <div class="muted" style="margin-top:4px">점수 = 총 입주민 수 + 브랜드 레벨×25 + 평균 만족도</div></div>`;
+    h += `<div class="card"><h3>예상 월 문의 <small>계약 전환 ${pct(r.tour * r.apply * r.contract)}</small></h3><div class="big-num">${inq}건</div></div>`;
+    h += `<div class="card"><h3>마케팅 채널 <small>월 ${fmtMoney(tot)}</small></h3>${CHANNELS.map(c => `<div class="toggle-item"><div class="info"><b>${c.name}</b><small>월 ${fmtMoney(Sim.chCost(b, c))} · ${c.eff}</small></div>
+      <button class="btn ${b.channels[c.id] ? 'on' : ''}" data-act="channel" data-arg="${c.id}">${b.channels[c.id] ? 'ON' : 'OFF'}</button></div>`).join('')}</div>`;
+    h += `<div class="card">${this.boostHtml(b)}</div>`;
+    return h;
+  },
+
+  // 💰 재무: 현금 · 대출 · 이자 · 세금
+  tab_fin() {
+    const S = Sim.S; const avail = S.loanCap - S.loan;
+    let h = this.ctaHtml();
+    h += `<div class="card"><h3>💰 회사 자금</h3>
+      <div class="kv2"><div><small>현금</small><b class="${S.cash < 0 ? 'neg' : 'pos'}">${fmtMoney(S.cash)}</b></div><div><small>대출</small><b>${fmtMoney(S.loan)}</b></div><div><small>월 이자</small><b class="neg">${fmtMoney(Math.round(S.loan * Sim.rate()))}</b></div></div>
+      <div class="row"><span class="k">대출 한도</span><span class="v">${fmtMoney(S.loanCap)} (연 ${Sim.rateYear()}%)</span></div>
+      <div class="btn-row"><button class="btn" data-act="borrow" ${avail < 100000 ? 'disabled' : ''}>+10억 대출</button><button class="btn y" data-act="repay" ${S.loan < 100000 || S.cash < 100000 ? 'disabled' : ''}>10억 상환</button></div></div>`;
+    h += `<div class="card"><h3>🏦 이자 보류 <small>${S.deferCount || 0} / ${DEFER_SEIZE}회</small></h3>
+      ${S.unpaid ? `<div class="row"><span class="k">미납 이자</span><span class="v neg">${fmtMoney(S.unpaid)}</span></div>` : ''}
+      <div class="btn-row"><button class="btn ${S.deferNext ? 'r' : 'ghost'}" data-act="defer">${S.deferNext ? '✓ 보류 예약됨' : '다음 달 이자 보류'}</button><button class="btn y" data-act="payunpaid" ${!S.unpaid || S.cash < S.unpaid ? 'disabled' : ''}>미납 이자 상환</button></div>
+      <div class="muted">${DEFER_WARN}회부터 은행이 찾아오고 ${DEFER_SEIZE}회면 건물을 압류해요</div></div>`;
+    if (S.bigProfit) h += `<div class="card"><h3>🧾 법인세 <small>매년 3월</small></h3><div class="row"><span class="k">올해 쌓인 과세 이익</span><span class="v">${fmtMoney(S.taxBase || 0)}</span></div><div class="row"><span class="k">예상 세금 (누진 9~24% + 지방세)</span><span class="v neg">${fmtMoney(Sim.corpTax(S.taxBase || 0))}</span></div></div>`;
+    if (S.negMonths > 0) h += `<div class="card warn"><h3>🚨 자금 위기 ${S.negMonths} / ${BANKRUPT_MONTHS}개월</h3><div class="muted">적자가 -10억을 넘는 달이 ${BANKRUPT_MONTHS}개월 이어지면 파산해요</div></div>`;
     return h;
   },
 
@@ -3751,19 +3999,6 @@ const UI = {
       <div class="row" style="margin-top:4px"><span class="k">연속 달성</span><span class="v pos">${S.stageStatus === 'cleared' || S.stageStatus === 'select' ? '클리어!' : S.streak + ' / 3개월'}</span></div>`;
   },
 
-  tab_mkt() {
-    const S = Sim.S; const b = Sim.branch(); if (!b) return this.ctaHtml() + '<div class="card"><div class="muted">지점이 생기면 마케팅을 집행할 수 있어요</div></div>';
-    const tot = CHANNELS.reduce((a, c) => a + (b.channels[c.id] ? Sim.chCost(b, c) : 0), 0);
-    let h = this.ctaHtml() + `<div class="card"><h3>📣 마케팅 채널 <small>${esc(b.name)} · 규모 ×${Sim.sizeMul(b)} · 월 ${fmtMoney(tot)}</small></h3>${CHANNELS.map(c => `<div class="toggle-item"><div class="info"><b>${c.name}</b><small>월 ${fmtMoney(Sim.chCost(b, c))} · ${c.eff}</small></div>
-      <button class="btn ${b.channels[c.id] ? 'on' : ''}" data-act="channel" data-arg="${c.id}">${b.channels[c.id] ? 'ON' : 'OFF'}</button></div>`).join('')}
-      <div class="muted" style="margin-top:4px">켜두면 매달 자동 집행돼요 · ${b.status === 'build' ? (Sim.lvl() >= 8 ? '공사 중 사전 계약에도 효과가 있어요' : '공사 중엔 효과가 없어요 (브랜드 Lv.8부터 사전 계약)') : '입주는 자동이 아니에요'}</div></div>`;
-    const est = Sim.inquiries(b, true); const mx = Math.max(...SEGS.map(k => est[k]), 1);
-    const r = Sim.rates(b);
-    h += `<div class="card"><h3>예상 월 문의 <small>총 ${Math.round(SEGS.reduce((a, k) => a + est[k], 0))}건</small></h3>${SEGS.map(k => `<div class="row" style="padding:2px 0"><span class="k" style="width:74px">${SEG_INFO[k].short}</span><div class="bar" style="flex:1"><i style="width:${est[k] / mx * 100}%;background:${SEG_INFO[k].color}"></i></div><span class="v" style="width:28px;text-align:right">${Math.round(est[k])}</span></div>`).join('')}
-      <div class="muted" style="margin-top:6px">전환율 · 투어 ${pct(r.tour)} → 지원 ${pct(r.apply)} → 계약 ${pct(r.contract)} → 입주 ${pct(r.movein)}<br>세일즈 매니저와 브랜드 레벨로 전환율을 올릴 수 있어요</div></div>`;
-    return h;
-  },
-
   act(a, arg) {
     const S = Sim.S; const b = Sim.branch();
     if (a === 'select') { this.openSelect(); return; }
@@ -3774,6 +4009,7 @@ const UI = {
     if (a === 'payunpaid') { if (Sim.repayUnpaid()) this.toast('✅ 미납 이자 상환 완료 · 보류 횟수 초기화'); }
     if (!b) { this.renderPanel(); this.updHud(true); return; }
     if (a === 'staffn') { const [id, d] = arg.split(':'); const n = Sim.stN(b, id) + (+d); if (+d > 0 && b.vacant && b.vacant[id] > S.month) return; b.staff[id] = clamp(n, 0, STAFF_MAX); }
+    if (a === 'grade') { const [id, d] = arg.split(':'); b.payLv = b.payLv || {}; b.payLv[id] = clamp(Sim.payLv(b, id) + (+d), 0, PAY_GRADES.length - 1); }
     if (a === 'eventn') { const [id, d] = arg.split(':'); b.events[id] = clamp(Sim.evN(b, id) + (+d), 0, EVENT_MAX); }
     if (a === 'channel') b.channels[arg] = !b.channels[arg];
     if (a === 'boost') { b.boost = clamp((b.boost || 1) + (+arg), 1, BOOST_MAX); }
@@ -3798,7 +4034,7 @@ const UI = {
       this.save(); return;
     }
     if (el.dataset.slider === 'rent') {
-      b.rentF = Math.round(+el.value / Sim.baseRent(b) * 10000) / 10000;
+      b.rentF = Math.min(Sim.S.rentCap || 99, Math.round(+el.value / Sim.baseRent(b) * 10000) / 10000);
       // 드래그 중엔 슬라이더를 제외한 문구만 갱신
       const card = $('#rentCard'); const tmp = document.createElement('div'); tmp.innerHTML = this.rentCardHtml(b);
       card.querySelector('.top').innerHTML = tmp.querySelector('.top').innerHTML;
@@ -3829,7 +4065,7 @@ const UI = {
         <div class="s">${land.name} · ${SIZES[b.size].name} ${Sim.rooms(b)}실 · ${Sim.grade(b).name} · ${CONCEPTS[b.concept].name}</div>
         <div class="s">${st ? `입주 ${Sim.occ(b)}/${Sim.rooms(b)}실 · 월세 ${Sim.rentNow(b)}만원 · 지난달 순이익 ${b.last ? fmtMoney(b.last.profit, true) : '-'}` : `🏗 공사중 · ${b.buildLeft}개월 남음`}${b.biz && b.biz.data ? ' · 📡데이터' : ''}${b.biz && b.biz.ads ? ' · 📺광고' : ''}</div></div>`;
     }).join('') || '<div class="muted">아직 보유한 건물이 없어요</div>';
-    this.modal({ wide: true, icon: '💼', title: `${esc(S.ceo)} 대표의 총 자산`, sub: `${esc(S.brand)} · ${Sim.fam().name} · ${dateStr(S.month)}`,
+    this.modal({ wide: true, icon: '💼', title: `${esc(S.ceo)} 대표의 총 자산`, sub: `${esc(S.brand)} · ${Sim.fam().name} · ${elapsedStr(S.month)}`,
       body: `<div class="as-big"><small>화면 맨 위 금액 = 보유 자산 (현금 + 부동산)</small><b>${fmtMoney(gross)}</b></div>
         <table class="as-tbl">
           <tr><td>💵 현금 (가용 자금)</td><td class="${S.cash < 0 ? 'neg' : ''}">${fmtMoney(S.cash)}</td></tr>
@@ -3859,15 +4095,29 @@ const UI = {
     const S = Sim.S;
     this.modal({ icon: '🎯', title: `STAGE ${S.stage} 목표`, sub: STAGES[S.stage - 1].area + ' · ' + STAGES[S.stage - 1].title, body: this.goalsHtml(Sim.goalState()) + `<div class="muted" style="margin-top:8px">최종 목표: 서울 10개 지점 · 브랜드 레벨 10 · 업계 1위</div>`, buttons: [{ label: '닫기' }] });
   },
+  // 🏆 업계 랭킹 · 브랜드 · 지점 목록 (탭에서 옮겨온 내용)
   showRank() {
     if (!Sim.S || this.title) return;
-    const r = Sim.rank();
-    this.modal({ icon: '🏆', title: '업계 랭킹', sub: `${esc(Sim.S.brand)} 현재 ${r.me}위`, body: r.list.map((x, i) => `<div class="rank-row ${x.me ? 'me' : ''}"><span class="no">${i + 1}</span><span class="nm">${esc(x.name)}</span><span>${x.score}</span></div>`).join('') + '<div class="muted" style="margin-top:6px">점수 = 총 입주민 수 + 브랜드 레벨×25 + 평균 만족도</div>', buttons: [{ label: '닫기' }] });
+    const S = Sim.S; const r = Sim.rank(); const cr = Sim.ceoRank(); const lv = Sim.lvl();
+    const rb = S.rankBest || { brand: 6, ceo: 6 };
+    const rw = k => `<div class="rank-rw">${[4, 3, 2, 1].map(t => `<span class="${rb[k] <= t ? 'got' : ''}">${t}위 ${fmtMoney(RANK_REWARDS[t])}${rb[k] <= t ? ' ✓' : ''}</span>`).join('')}</div>`;
+    const brs = S.branches.map((b, i) => `<div class="br-item ${i === S.sel ? 'cur' : ''}" data-br="${i}"><span class="nm">${esc(b.name)}</span><span>${b.status === 'build' ? '🏗 공사중' : `${Math.round(Sim.occ(b) / Sim.rooms(b) * 100)}% · 😊${Math.round(b.sat)}`}</span><span class="${b.last && b.last.profit >= 0 ? 'pos' : 'neg'}">${b.last ? fmtMoney(b.last.profit, true) : '-'}</span></div>`).join('') || '<div class="muted">아직 없어요</div>';
+    this.modal({ wide: true, icon: '🏆', title: '업계 랭킹 · 브랜드', sub: `${esc(S.brand)} 브랜드 ${r.me}위 · 대표 자산 ${cr.me}위`,
+      body: `<div class="rep-sec">⭐ 브랜드 레벨 ${lv} · ${BRAND_NAMES[lv]}</div>
+        <div class="bar big"><i style="width:${Sim.lvlProgress() * 100}%;background:var(--yellow)"></i></div>
+        <div class="muted" style="margin:4px 0 6px">${lv < 10 ? `다음 레벨까지 ${Math.ceil(BRAND_XP[lv] - S.brandXP)}pt` : '최고 레벨!'} · ${BRAND_PERKS.filter(p => p.lv > lv).slice(0, 1).map(p => `Lv.${p.lv}: ${p.text}`).join('')}</div>
+        <div class="rep-sec">🏢 브랜드 순위 <small class="muted">자산가치 · 브랜드 · 만족도</small></div>${rw('brand')}
+        ${r.list.map((x, i) => `<div class="rank-row ${x.me ? 'me' : ''}"><span class="no">${i + 1}</span><span class="nm">${esc(x.name)}<small>자산 ${fmtMoney(x.asset * 10000)} · Lv.${x.lv}</small></span><span>${x.score}</span></div>`).join('')}
+        <div class="rep-sec">💎 대표 순자산 순위</div>${rw('ceo')}
+        ${cr.list.map((x, i) => `<div class="rank-row ${x.me ? 'me' : ''}"><span class="no">${i + 1}</span><span class="nm">${esc(x.name)}<small>${esc(x.brand)}</small></span><span>${fmtMoney(x.nw * 10000)}</span></div>`).join('')}
+        <div class="rep-sec">📍 내 지점 <small class="muted">누르면 그 지점으로 이동</small></div>${brs}`,
+      buttons: [{ label: '닫기' }] });
+    document.querySelectorAll('#modal [data-br]').forEach(el => el.onclick = () => { S.sel = +el.dataset.br; this.mq = []; this.modalOn = false; this.nextModal(); this.renderPanel(); this.updHud(true); });
   },
   showMenu() {
     if (!Sim.S || this.title) return;
     const S = Sim.S;
-    this.modal({ icon: '📋', title: `CEO ${esc(S.ceo)}`, sub: `${esc(S.brand)} · ${dateStr(S.month)} · 운영 ${S.month}개월`,
+    this.modal({ icon: '📋', title: `CEO ${esc(S.ceo)}`, sub: `${esc(S.brand)} · ${elapsedStr(S.month)}`,
       body: `<div class="row"><span class="k">CEO 피로도</span><span class="v ${(S.fatigue || 0) >= 70 ? "neg" : ""}">${Math.round(S.fatigue || 0)} / 100</span></div><div class="row"><span class="k">가족</span><span class="v">${S.married ? "기혼" : "미혼"}${S.kids ? " · 자녀 " + S.kids + "명" : ""}</span></div><div class="row"><span class="k">CEO 개인 지출 누적</span><span class="v">${fmtMoney(S.ceoSpent || 0)}</span></div><div class="row"><span class="k">가문</span><span class="v">${Sim.fam().name}</span></div><div class="row"><span class="k">특수능력</span><span class="v">${Sim.fam().skill} · ${Sim.fam().eff}</span></div><div class="row"><span class="k">지점 수</span><span class="v">${S.branches.length}</span></div><div class="row"><span class="k">브랜드</span><span class="v">Lv.${Sim.lvl()} ${BRAND_NAMES[Sim.lvl()]}</span></div><div class="muted" style="margin-top:6px">진행 상황은 매달 자동 저장돼요</div>`,
       buttons: [{ label: '🧳 휴가 가기 (피로도 ' + Math.round(S.fatigue || 0) + ')', cls: 'y', on: () => this.vacation(false) }, { label: '저장하고 타이틀로', on: () => { this.save(); this.showTitle(); } }, { label: S.showReport === false ? '월 결산 팝업 켜기' : '월 결산 팝업 끄기', cls: 'ghost', on: () => { S.showReport = S.showReport === false; this.toast(S.showReport ? '📅 월 결산 팝업 ON' : '📅 월 결산은 알림으로만 표시'); this.save(); } }, { label: '도움말', cls: 'ghost', on: () => this.help() }, { label: '새 게임 (데이터 삭제)', cls: 'r', on: () => this.modal({ icon: '⚠️', title: '정말 처음부터 시작할까요?', body: '저장 데이터가 삭제돼요', buttons: [{ label: '삭제하고 새 게임', cls: 'r', on: () => { localStorage.removeItem(SAVE_KEY); this.showTitle(); } }, { label: '취소', cls: 'ghost' }] }) }, { label: '닫기', cls: 'ghost' }] });
   },
